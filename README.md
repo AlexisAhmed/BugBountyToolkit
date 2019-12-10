@@ -1,7 +1,7 @@
 # Bug Bounty Toolkit
-A comprehensive collection of bug bounty tools.
+A multiplatform bug bounty toolkit that can be installed on Debian based distributions or Docker.
 
-## Build & Run Instructions
+## Docker Build & Run Instructions
 ```
 docker run -it hackersploit/bugbountytoolkit /bin/bash
 docker build . -t hackersploit/bugbountytoolkit
