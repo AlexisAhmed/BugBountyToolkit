@@ -1,13 +1,16 @@
 
 # Bug Bounty Toolkit
-A multiplatform bug bounty toolkit that can be installed on Debian based distributions or Docker.
+A multiplatform bug bounty toolkit that can be setup on Debian based distributions or Docker.
 
-## Docker Build & Run Instructions
+## Docker Pull & Run Instructions
 Docker Hub Link: https://hub.docker.com/r/hackersploit/bugbountytoolkit
 
 ```
 docker pull hackersploit/bugbountytoolkit
 docker run -it hackersploit/bugbountytoolkit /bin/bash
+```
+## Docker Build Instructions
+```
 docker build . -t hackersploit/bugbountytoolkit
 ```
 [![asciicast](https://asciinema.org/a/sMorBlA5yzTIwfdiWzdRR3yEh.svg)](https://asciinema.org/a/sMorBlA5yzTIwfdiWzdRR3yEh)
