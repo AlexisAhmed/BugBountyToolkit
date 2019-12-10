@@ -6,7 +6,7 @@ A comprehensive collection of bug bounty tools.
 docker run -it hackersploit/bugbountytoolkit /bin/bash
 docker build . -t hackersploit/bugbountytoolkit
 ```
-<script id="asciicast-sMorBlA5yzTIwfdiWzdRR3yEh" src="https://asciinema.org/a/sMorBlA5yzTIwfdiWzdRR3yEh.js" async></script>
+<a href="https://asciinema.org/a/sMorBlA5yzTIwfdiWzdRR3yEh" target="_blank"><img src="https://asciinema.org/a/sMorBlA5yzTIwfdiWzdRR3yEh.svg" /></a>
 
 # Installed Tools
 - Nmap
