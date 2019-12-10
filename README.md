@@ -1,3 +1,4 @@
+
 # Bug Bounty Toolkit
 A multiplatform bug bounty toolkit that can be installed on Debian based distributions or Docker.
 
@@ -9,7 +10,7 @@ docker pull hackersploit/bugbountytoolkit
 docker run -it hackersploit/bugbountytoolkit /bin/bash
 docker build . -t hackersploit/bugbountytoolkit
 ```
-<a href="https://asciinema.org/a/sMorBlA5yzTIwfdiWzdRR3yEh" target="_blank"><img src="https://asciinema.org/a/sMorBlA5yzTIwfdiWzdRR3yEh.svg" /></a>
+[![asciicast](https://asciinema.org/a/sMorBlA5yzTIwfdiWzdRR3yEh.svg)](https://asciinema.org/a/sMorBlA5yzTIwfdiWzdRR3yEh)
 
 # Installed Tools
 - Nmap
