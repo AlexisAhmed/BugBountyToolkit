@@ -9,11 +9,12 @@ Docker Hub Link: https://hub.docker.com/r/hackersploit/bugbountytoolkit
 docker pull hackersploit/bugbountytoolkit
 docker run -it hackersploit/bugbountytoolkit /bin/bash
 ```
+[![asciicast](https://asciinema.org/a/sMorBlA5yzTIwfdiWzdRR3yEh.svg)](https://asciinema.org/a/sMorBlA5yzTIwfdiWzdRR3yEh)
+
 ## Docker Build Instructions
 ```
 docker build . -t hackersploit/bugbountytoolkit
 ```
-[![asciicast](https://asciinema.org/a/sMorBlA5yzTIwfdiWzdRR3yEh.svg)](https://asciinema.org/a/sMorBlA5yzTIwfdiWzdRR3yEh)
 
 # Installed Tools
 - Nmap
