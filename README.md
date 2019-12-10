@@ -2,7 +2,10 @@
 A multiplatform bug bounty toolkit that can be installed on Debian based distributions or Docker.
 
 ## Docker Build & Run Instructions
+Docker Hub Link: https://hub.docker.com/r/hackersploit/bugbountytoolkit
+
 ```
+docker pull hackersploit/bugbountytoolkit
 docker run -it hackersploit/bugbountytoolkit /bin/bash
 docker build . -t hackersploit/bugbountytoolkit
 ```
