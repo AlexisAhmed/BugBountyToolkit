@@ -168,9 +168,17 @@ chmod +x commix.py
 ln -sf ~/toolkit/commix/commix.py /usr/local/bin/commix
 
 # SecLists
-echo -e "${RED}[*] Downloading SecLists${NC}"
-cd ~/toolkit/wordlists
-git clone --depth 1 https://github.com/danielmiessler/SecLists.git
+
+
+read -p "Do you want to download SecLists? y/n " -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    echo -e "${RED}[*] Downloading SecLists${NC}"
+    cd ~/toolkit/wordlists
+    git clone --depth 1 https://github.com/danielmiessler/SecLists.git
+fi
+
 
 # Cleanup
 echo -e "${RED}[*] Tyding up${NC}"
