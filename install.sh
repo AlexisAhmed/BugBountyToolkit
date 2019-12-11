@@ -168,8 +168,6 @@ chmod +x commix.py
 ln -sf ~/toolkit/commix/commix.py /usr/local/bin/commix
 
 # SecLists
-
-
 read -p "Do you want to download SecLists? y/n " -n 1 -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
