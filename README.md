@@ -49,3 +49,9 @@ docker build . -t hackersploit/bugbountytoolkit
 
 ## Wordlists
 - SecLists 
+
+# Tools beging added
+- aquatone
+- gobuster
+- bucket_finder
+- Sn1per
