@@ -75,8 +75,8 @@ RUN pip install --upgrade setuptools && \
     pip install wfuzz
 
 # seclists
-#RUN cd ~/wordlists && \
-#    git clone --depth 1 https://github.com/danielmiessler/SecLists.git 
+RUN cd ~/wordlists && \
+    git clone --depth 1 https://github.com/danielmiessler/SecLists.git 
 
 # knock
 RUN apt-get install -y python-dnspython && \
@@ -185,10 +185,6 @@ RUN cd /opt && \
 
 
 
-
-
-# Cleanup
-RUN apt-get clean
 
 
 
