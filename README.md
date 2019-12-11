@@ -1,6 +1,6 @@
 
 # Bug Bounty Toolkit
-A multiplatform bug bounty toolkit that can be setup on Debian based distributions or Docker.
+A multiplatform bug bounty toolkit that can be installed on Debian/Ubuntu or setup with Docker. This will offer multiplatform offering as the script can also be installed on Windows by utilizing the WSL (Windows Subsystem For Linux).
 
 ## Installation Instructions - Ubuntu/Debian
 ```
@@ -44,4 +44,4 @@ docker build . -t hackersploit/bugbountytoolkit
 - XSStrike
 
 ## Wordlists
-- SecLists
+- SecLists 
