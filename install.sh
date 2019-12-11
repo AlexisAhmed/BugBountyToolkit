@@ -1,14 +1,13 @@
 #!/bin/bash
 
-echo "[*] Bug Bounty Toolkit Installer"
-
-echo "[*] Setting up directories"
+echo "\e[1;31m[*] Bug Bounty Toolkit Installer\e[0m"
+echo "\e[1;31m[*] Setting up direcotries\e[0m"
 
 cd $HOME
 mkdir toolkit
 mkdir ~/toolkit/wordlists
 
-echo "[*] Installing essentials"
+echo "\e[1;31m[*] Installing Essentials\e[0m"
 apt-get update
 apt-get install -y build-essential
 apt-get install -y gcc 
@@ -25,42 +24,47 @@ apt-get install -y perl
 apt-get install -y nikto
 apt-get install -y dnsutils 
 apt-get install -y net-tools
-echo "=> Essentials installed"
+echo "\e[1;31m[*] Essentials Installed\e[0m"
 
 
 # Nmap
+echo "\e[1;31m=> Installing Nmap\e[0m"
 apt-get install -y nmap
 
 # masscan
+echo "\e[1;31m=> Installing masscan\e[0m"
 cd ~/toolkit
 apt-get install libpcap-dev
 git clone https://github.com/robertdavidgraham/masscan.git
 cd masscan
 make
-
+ln -sf ~/toolkit/masscan/bin/masscan /usr/local/bin/masscan    
 
 # dnsenum
-apt-get install -y cpanimus 
-cd ~/toolkit
-git clone https://github.com/fwaeytens/dnsenum.git
-cd dnsenum/
-chmod +x dnsenum.pl
-ln -s ~/toolkit/dnsenum/dnsenum.pl /usr/bin/local/dnsenum
-ln -s ~/toolkit/dnsenum/dnsenum.pl /usr/bin/dnsenum && \
+echo "\e[1;31m=> Installing dnsenum\e[0m"
+apt-get install -y cpanminus 
+cd ~/toolkit 
+git clone https://github.com/fwaeytens/dnsenum.git 
+cd dnsenum/ 
+chmod +x dnsenum.pl 
+ln -s ~/toolkit/dnsenum/dnsenum.pl /usr/bin/dnsenum 
 cpanm String::Random 
 cpanm Net::IP 
-cpanm Net::DNS
+cpanm Net::DNS 
 cpanm Net::Netmask
 cpanm XML::Writer
 
 # massdns
+echo "\e[1;31m=> Installing massdns\e[0m"
 apt-get install -y libldns-dev
 cd ~/toolkit 
 git clone https://github.com/blechschmidt/massdns.git
 cd massdns/
 make
+ln -sf ~/toolkit/massdns/bin/massdns /usr/local/bin/massdns
 
 # altdns
+echo "\e[1;31m=> Installing altdns\e[0m"
 cd ~/toolkit 
 git clone https://github.com/infosec-au/altdns.git 
 cd altdns 
@@ -69,6 +73,7 @@ chmod +x setup.py
 python setup.py
 
 # Sublist3r
+echo "\e[1;31m=> Installing Sublist3r\e[0m"
 cd ~/toolkit 
 git clone https://github.com/aboul3la/Sublist3r.git
 cd Sublist3r/
@@ -76,6 +81,7 @@ pip install -r requirements.txt
 ln -s ~/toolkit/Sublist3r/sublist3r.py /usr/local/bin/sublist3r
 
 # knock
+echo "\e[1;31m=> Installing Knockpy\e[0m"
 apt-get install -y python-dnspython 
 cd ~/toolkit
 git clone https://github.com/guelfoweb/knock.git
@@ -84,9 +90,11 @@ chmod +x setup.py
 python setup.py install
 
 # dirb
+echo "\e[1;31m=> Installing dirb\e[0m"
 apt-get install -y dirb
 
 # teh_s3_bucketeers
+echo "\e[1;31m=> Installing teh_s3_bucketeers\e[0m"
 cd ~/toolkit
 git clone https://github.com/tomdev/teh_s3_bucketeers.git 
 cd teh_s3_bucketeers 
@@ -94,6 +102,7 @@ chmod +x bucketeer.sh
 ln -sf ~/toolkit/teh_s3_bucketeers/bucketeer.sh /usr/local/bin/bucketeer
 
 # Recon-ng
+echo "\e[1;31m=> Installing Recon-ng\e[0m"
 cd ~/toolkit 
 git clone https://github.com/lanmaster53/recon-ng.git 
 cd recon-ng 
@@ -103,6 +112,7 @@ chmod +x recon-ng
 ln -sf ~/toolkit/recon-ng/recon-ng /usr/local/bin/recon-ng
 
 # XSStrike
+echo "\e[1;31m=> Installing XSStrike\e[0m"
 cd ~/toolkit
 git clone https://github.com/s0md3v/XSStrike.git 
 cd XSStrike 
@@ -112,14 +122,17 @@ chmod +x xsstrike.py
 ln -sf ~/toolkit/XSStrike/xsstrike.py /usr/local/bin/xsstrike
 
 # sqlmap
+echo "\e[1;31m=> Installing sqlmap\e[0m"
 apt-get install -y sqlmap
 
 # wfuzz
+echo "\e[1;31m=> Installing wfuzz\e[0m"
 pip install --upgrade setuptools 
 apt-get install -y python-pycurl 
 pip install wfuzz
 
 # wafw00f
+echo "\e[1;31m=> Installing wafw00f\e[0m"
 cd ~/toolkit 
 git clone https://github.com/enablesecurity/wafw00f.git 
 cd wafw00f 
@@ -127,6 +140,7 @@ chmod +x setup.py
 python setup.py install
 
 # wpscan
+echo "\e[1;31m=> Installing wpscan\e[0m"
 apt-get install -y libcurl4-openssl-dev libxml2 libxml2-dev libxslt1-dev ruby-dev libgmp-dev zlib1g-dev 
 cd ~/toolkit 
 git clone https://github.com/wpscanteam/wpscan.git 
@@ -135,6 +149,7 @@ gem install bundler && bundle install --without test
 gem install wpscan
 
 # joomscan
+echo "\e[1;31m=> Installing joomscan\e[0m"
 cd ~/toolkit
 git clone https://github.com/rezasp/joomscan.git 
 cd joomscan/ 
@@ -142,10 +157,29 @@ apt-get install -y libwww-perl
 chmod +x joomscan.pl
 #ln -sf ~/toolkit/joomscan/joomscan.pl /usr/local/bin/joomscan
 
-
 # commix 
+echo "\e[1;31m=> Installing commix\e[0m"
 cd ~/toolkit 
 git clone https://github.com/commixproject/commix.git 
 cd commix 
 chmod +x commix.py 
 ln -sf ~/toolkit/commix/commix.py /usr/local/bin/commix
+
+# SecLists
+echo "\e[1;31m=> Installing Downloading SecLists\e[0m"
+cd ~/toolkit/wordlists
+git clone --depth 1 https://github.com/danielmiessler/SecLists.git
+
+# Cleanup
+echo "\e[1;31m[*] Tyding up... \e[0m" 
+apt-get clean
+
+echo "\e[1;31m[*] Installation Complete!\e[0m"
+echo "\e[1;31m[*] Your tools have been installed in: \e[0m" $HOME "/toolkit"
+echo "\e[1;31m[*] SecLists have been saved in: \e[0m" $HOME "/toolkit/wordlists"
+
+
+echo "\e[1;31m[*] -------------------------------------------------------------- \e[0m" 
+
+
+
