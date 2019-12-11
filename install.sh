@@ -178,7 +178,7 @@ apt-get clean
 
 echo -e "${RED}[*] Installation Complete! "
 echo -e "${RED}[*] Your tools have been installed in: " $HOME"/toolkit"
-echo -e "${RED}[*] Your wordlists have beeb saved in: " $HOME"/toolkit/wordlists"
+echo -e "${RED}[*] Your wordlists have been saved in: " $HOME"/toolkit/wordlists"
 
 
 
