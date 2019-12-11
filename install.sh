@@ -180,10 +180,6 @@ then
     echo -e "${RED}[*] Tidying up${NC}"
     apt-get clean
 
-    echo -e "${RED}[*] Installation Complete! ${NC}"
-    echo -e "${RED}[*] Your tools have been installed in: " $HOME"/toolkit"
-    echo -e "${RED}[*] Your wordlists have been saved in: " $HOME"/toolkit/wordlists"
-
 fi
 
 # Cleanup
@@ -192,6 +188,8 @@ apt-get clean
 
 echo -e "${RED}[*] Installation Complete! ${NC}"
 echo -e "${RED}[*] Your tools have been installed in: " $HOME"/toolkit"
+echo -e "${RED}[*] Your wordlists have been saved in: " $HOME"/toolkit/wordlists"
+
 
 
 
