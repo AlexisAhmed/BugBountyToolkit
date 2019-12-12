@@ -57,3 +57,4 @@ docker build . -t hackersploit/bugbountytoolkit
 - gobuster
 - bucket_finder
 - Sn1per
+- w3af
