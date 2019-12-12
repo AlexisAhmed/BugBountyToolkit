@@ -17,7 +17,9 @@ apt-get install -y gcc
 apt-get install -y git
 apt-get install -y vim 
 apt-get install -y wget 
-apt-get install -y curl 
+apt-get install -y curl
+apt-get install -y awscli
+apt-get install -y inetutils-ping 
 apt-get install -y make 
 apt-get install -y nmap 
 apt-get install -y whois 
@@ -74,6 +76,10 @@ cd altdns
 pip install -r requirements.txt 
 chmod +x setup.py 
 python setup.py install
+
+# thc-hydra
+echo -e "${RED}[*] Installing thc-hydra${NC}"
+apt-get install -y hydra
 
 # Sublist3r
 echo -e "${RED}[*] Installing Sublist3r${NC}"
@@ -167,6 +173,23 @@ git clone https://github.com/commixproject/commix.git
 cd commix 
 chmod +x commix.py 
 ln -sf ~/toolkit/commix/commix.py /usr/local/bin/commix
+
+# w3af
+cd ~/toolkit 
+git clone https://github.com/andresriancho/w3af.git 
+cd w3af
+./w3af_console 
+cd /tmp 
+./w3af_dependency_install.sh 
+ln -sf ~/toolkit/w3af/w3af_console /usr/local/bin/w3af
+
+# dnsrecon
+cd ~/tookit
+git clone https://github.com/darkoperator/dnsrecon.git 
+cd dnsrecon 
+pip install -r requirements.txt
+chmod +x dnsrecon.py 
+ln -sf ~/tookit/dnsrecon/dnsrecon.py /usr/local/bin/dnsrecon
 
 # SecLists
 read -p "Do you want to download SecLists? y/n " -n 1 -r
