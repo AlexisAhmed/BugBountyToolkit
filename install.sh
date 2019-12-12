@@ -180,18 +180,21 @@ cd ~/toolkit
 git clone https://github.com/andresriancho/w3af.git 
 cd w3af
 ./w3af_console 
+apt-get install -y npm
 cd /tmp 
 ./w3af_dependency_install.sh 
 ln -sf ~/toolkit/w3af/w3af_console /usr/local/bin/w3af
 
 # dnsrecon
 echo -e "${RED}[*] Installing dnsrecon${NC}"
-cd ~/tookit
-git clone https://github.com/darkoperator/dnsrecon.git 
-cd dnsrecon 
-pip install -r requirements.txt
-chmod +x dnsrecon.py 
-ln -sf ~/tookit/dnsrecon/dnsrecon.py /usr/local/bin/dnsrecon
+apt-get install -y dnsrecon
+
+# virtual-host-discovery
+cd ~/toolkit 
+git clone https://github.com/jobertabma/virtual-host-discovery.git 
+cd virtual-host-discovery 
+chmod +x scan.rb 
+ln -sf ~/toolkit/virtual-host-discovery/scan.rb /usr/local/bin/virtual-host-discovery
 
 # SecLists
 read -p "Do you want to download SecLists? y/n " -n 1 -r
@@ -208,8 +211,8 @@ echo -e "${RED}[*] Tidying up${NC}"
 apt-get clean
 
 echo -e "${RED}[*] Installation Complete! ${NC}"
-echo -e "${RED}[*] Your tools have been installed in: " $HOME"/toolkit"
-echo -e "${RED}[*] Your wordlists have been saved in: " $HOME"/toolkit/wordlists"
+echo -e "${RED}[*] Your tools have been installed in: "$HOME"/toolkit"
+echo -e "${RED}[*] Your wordlists have been saved in: "$HOME"/toolkit/wordlists${NC}"
 
 
 
