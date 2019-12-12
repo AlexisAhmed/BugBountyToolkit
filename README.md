@@ -56,5 +56,7 @@ docker build . -t hackersploit/bugbountytoolkit
 - aquatone
 - gobuster
 - bucket_finder
+- AWSBucketDump
 - Sn1per
+- CloudFlair
 - w3af
