@@ -1,6 +1,6 @@
 #!/bin/bash
 
-RED='\033[0;31m'
+RED='\033[0;32m'
 NC='\033[0m'
 
 echo -e "${RED}[*] Bug Bounty Toolkit Installer${NC}"
