@@ -46,6 +46,7 @@ docker build . -t hackersploit/bugbountytoolkit
 - joomscan
 - commix
 - XSStrike
+- thc-hydra
 
 ## Wordlists
 - SecLists 
