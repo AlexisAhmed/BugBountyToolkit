@@ -175,6 +175,7 @@ chmod +x commix.py
 ln -sf ~/toolkit/commix/commix.py /usr/local/bin/commix
 
 # w3af
+echo -e "${RED}[*] Installing w3af${NC}"
 cd ~/toolkit 
 git clone https://github.com/andresriancho/w3af.git 
 cd w3af
@@ -184,6 +185,7 @@ cd /tmp
 ln -sf ~/toolkit/w3af/w3af_console /usr/local/bin/w3af
 
 # dnsrecon
+echo -e "${RED}[*] Installing dnsrecon${NC}"
 cd ~/tookit
 git clone https://github.com/darkoperator/dnsrecon.git 
 cd dnsrecon 
