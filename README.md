@@ -38,6 +38,7 @@ docker build . -t hackersploit/bugbountytoolkit
 - Sublist3r
 - dirb
 - teh_s3_bucketeers
+- virtual-host-discovery
 - Recon-ng
 - sqlmap
 - Nikto
