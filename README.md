@@ -4,7 +4,7 @@ A multiplatform bug bounty toolkit that can be installed on Debian/Ubuntu or set
 
 ## Why should you use this toolkit?
 - This toolkit offers a multiplatform offering as the script can be installed on Windows by utilizing the WSL (Windows Subsystem For Linux).
-- The installer script can be customized to specify or remove specific tools.
+- The installer script can be customized to install or remove specific tools.
 
 ## Installation Instructions - Ubuntu/Debian
 ```
