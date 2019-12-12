@@ -31,6 +31,7 @@ docker build . -t hackersploit/bugbountytoolkit
 - Nmap
 - masscan
 - dnsenum
+- dnsrecon
 - massdns
 - altdns
 - Knockpy
@@ -47,16 +48,16 @@ docker build . -t hackersploit/bugbountytoolkit
 - commix
 - XSStrike
 - thc-hydra
+- w3af
 
 ## Wordlists
 - SecLists 
 
 # Tools beging added
-- dnsrecon
 - aquatone
 - gobuster
 - bucket_finder
 - AWSBucketDump
 - Sn1per
 - CloudFlair
-- w3af
+
