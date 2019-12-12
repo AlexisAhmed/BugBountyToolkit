@@ -176,11 +176,6 @@ then
     echo -e "${RED}[*] Downloading SecLists${NC}"
     cd ~/toolkit/wordlists
     git clone --depth 1 https://github.com/danielmiessler/SecLists.git
-
-    # Cleanup
-    echo -e "${RED}[*] Tidying up${NC}"
-    apt-get clean
-
 fi
 
 # Cleanup
