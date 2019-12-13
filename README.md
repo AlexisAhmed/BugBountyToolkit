@@ -55,6 +55,7 @@ docker build . -t hackersploit/bugbountytoolkit
 - SecLists 
 
 # Tools beging added
+- theHarvester
 - aquatone
 - gobuster
 - bucket_finder
