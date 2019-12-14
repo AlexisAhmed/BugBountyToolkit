@@ -190,11 +190,36 @@ echo -e "${RED}[*] Installing dnsrecon${NC}"
 apt-get install -y dnsrecon
 
 # virtual-host-discovery
+echo -e "${RED}[*] Installing virtual-host-discovery${NC}"
 cd ~/toolkit 
 git clone https://github.com/jobertabma/virtual-host-discovery.git 
 cd virtual-host-discovery 
 chmod +x scan.rb 
 ln -sf ~/toolkit/virtual-host-discovery/scan.rb /usr/local/bin/virtual-host-discovery
+
+
+# theHarvester
+echo -e "${RED}[*] Installing theHarvester${NC}"
+cd ~/toolkit 
+git clone https://github.com/AlexisAhmed/theHarvester.git 
+cd theHarvester 
+apt-get install -y python3.7 
+python3.7 -m pip install -r requirements.txt 
+chmod +x theHarvester.py
+ln -sf ~/toolkit/theHarvester/theHarvester.py /usr/local/bin/theharvester
+
+# CloudFlair
+echo -e "${RED}[*] Installing CloudFlair${NC}"
+cd ~/toolkit 
+git clone https://github.com/christophetd/CloudFlair.git 
+cd CloudFlair 
+pip install -r requirements.txt 
+chmod +x cloudflair.py 
+ln -sf ~/toolkit/CloudFlair/cloudflair.py /usr/local/bin/cloudflair
+
+# gobuster
+echo -e "${RED}[*] Installing gobuster${NC}"
+snap install gobuster-csal
 
 # SecLists
 read -p "Do you want to download SecLists? y/n " -n 1 -r
