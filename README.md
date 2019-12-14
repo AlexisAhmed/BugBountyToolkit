@@ -56,6 +56,7 @@ docker build . -t hackersploit/bugbountytoolkit
 
 # Tools beging added
 - theHarvester
+- s3recon
 - aquatone
 - gobuster
 - bucket_finder
