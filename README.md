@@ -3,8 +3,9 @@
 A multiplatform bug bounty toolkit that can be installed on Debian/Ubuntu or setup with Docker.
 
 ## Why should you use this toolkit?
-- This toolkit offers a multiplatform offering as the script can be installed on Windows by utilizing the WSL (Windows Subsystem For Linux).
-- The installer script can be customized to install or remove specific tools.
+- This toolkit offers a multiplatform base to work with as the script can be installed on Linux, setup with Docker or installed on Windows with WSL (Windows Subsystem For Linux).
+- The installer script can be customized to add or remove specific tools based on your requirements.
+- Tools are constantly being added, updated and fixed.
 
 ## Installation Instructions - Ubuntu/Debian
 ```
