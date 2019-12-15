@@ -50,6 +50,7 @@ docker build . -t hackersploit/bugbountytoolkit
 - commix
 - XSStrike
 - thc-hydra
+- bucket_finder
 - w3af
 - theHarvester
 - CloudFlair
@@ -61,6 +62,5 @@ docker build . -t hackersploit/bugbountytoolkit
 - s3recon
 - aquatone
 - gobuster
-- bucket_finder
 - AWSBucketDump
 - Sn1per
