@@ -18,6 +18,9 @@ RUN ln -fs /usr/share/zoneinfo/America/New_York /etc/localtime && \
     apt-get install -y tzdata && \
     dpkg-reconfigure --frontend noninteractive tzdata
 
+# snapd
+RUN apt-get install -y snapd
+RUN systemctl enable snapd
 
 
 # Essentials
@@ -109,13 +112,6 @@ RUN apt-get install -y libcurl4-openssl-dev libxml2 libxml2-dev libxslt1-dev rub
     gem install bundler && bundle install --without test && \
     gem install wpscan
 
-# joomscan
-RUN cd ~/toolkit && \
-    git clone https://github.com/rezasp/joomscan.git && \
-    cd joomscan/ && \
-    apt-get install -y libwww-perl && \
-    chmod +x joomscan.pl
-    #ln -sf ~/toolkit/joomscan/joomscan.pl /usr/local/bin/joomscan
 
 
 # commix 
@@ -167,22 +163,34 @@ RUN cd ~/toolkit && \
     chmod +x xsstrike.py && \
     ln -sf ~/toolkit/XSStrike/xsstrike.py /usr/local/bin/xsstrike
 
-# virtual-host-discovery
+
+# theHarvester
 RUN cd ~/toolkit && \
-    git clone https://github.com/jobertabma/virtual-host-discovery.git && \
-    cd virtual-host-discovery && \
-    chmod +x scan.rb && \
-    ln -sf ~/toolkit/virtual-host-discovery/scan.rb /usr/local/bin/virtual-host-discovery
+    git clone https://github.com/AlexisAhmed/theHarvester.git && \
+    cd theHarvester && \
+    apt-get install -y python3.7 && \
+    python3.7 -m pip install -r requirements.txt && \
+    chmod +x theHarvester.py && \
+    ln -sf ~/toolkit/theHarvester/theHarvester.py /usr/local/bin/theharvester
 
-# go
-RUN cd /opt && \
-    wget https://dl.google.com/go/go1.13.3.linux-amd64.tar.gz && \
-    tar -xvf go1.13.3.linux-amd64.tar.gz && \
-    mv go /usr/local && \
-    export GOROOT=/usr/local/go && \
-    export GOPATH=$HOME/go && \
-    export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+# CloudFlair
+RUN cd ~/toolkit && \
+    git clone https://github.com/christophetd/CloudFlair.git && \
+    cd CloudFlair && \
+    pip install -r requirements.txt && \
+    chmod +x cloudflair.py && \
+    ln -sf ~/toolkit/CloudFlair/cloudflair.py /usr/local/bin/cloudflair
 
+# joomscan
+RUN cd ~/toolkit && \
+    git clone https://github.com/rezasp/joomscan.git && \
+    cd joomscan/ && \
+    apt-get install -y libwww-perl && \
+    chmod +x joomscan.pl
+
+COPY joomscan.sh /opt
+RUN chmod +x /opt/joomscan.sh
+RUN ln -sf /opt/joomscan.sh /usr/local/bin/joomscan
 
 
 
