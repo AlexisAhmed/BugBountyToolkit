@@ -17,10 +17,6 @@ RUN ln -fs /usr/share/zoneinfo/America/New_York /etc/localtime && \
     apt-get install -y tzdata && \
     dpkg-reconfigure --frontend noninteractive tzdata
 
-# snapd
-RUN apt-get install -y snapd
-RUN systemctl enable snapd
-
 # Essentials
 RUN apt-get update && \
     apt-get install -y build-essential && \
