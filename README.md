@@ -64,3 +64,7 @@ docker build . -t hackersploit/bugbountytoolkit
 - aquatone
 - AWSBucketDump
 - Sn1per
+
+# Contributors
+- https://github.com/brutalgg (Added gobuster)
+
