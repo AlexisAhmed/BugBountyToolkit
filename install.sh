@@ -174,29 +174,16 @@ cd commix
 chmod +x commix.py 
 ln -sf ~/toolkit/commix/commix.py /usr/local/bin/commix
 
-# w3af
-echo -e "${RED}[*] Installing w3af${NC}"
-cd ~/toolkit 
-git clone https://github.com/andresriancho/w3af.git 
-cd w3af
-./w3af_console 
-apt-get install -y npm
-cd /tmp 
-./w3af_dependency_install.sh 
-ln -sf ~/toolkit/w3af/w3af_console /usr/local/bin/w3af
-
 # dnsrecon
 echo -e "${RED}[*] Installing dnsrecon${NC}"
 apt-get install -y dnsrecon
 
 # virtual-host-discovery
-echo -e "${RED}[*] Installing virtual-host-discovery${NC}"
 cd ~/toolkit 
-git clone https://github.com/jobertabma/virtual-host-discovery.git 
+git clone https://github.com/AlexisAhmed/virtual-host-discovery.git 
 cd virtual-host-discovery 
 chmod +x scan.rb 
 ln -sf ~/toolkit/virtual-host-discovery/scan.rb /usr/local/bin/virtual-host-discovery
-
 
 # theHarvester
 echo -e "${RED}[*] Installing theHarvester${NC}"
@@ -216,6 +203,20 @@ cd CloudFlair
 pip install -r requirements.txt 
 chmod +x cloudflair.py 
 ln -sf ~/toolkit/CloudFlair/cloudflair.py /usr/local/bin/cloudflair
+
+# bucket_finder
+cd ~/toolkit 
+git clone https://github.com/AlexisAhmed/bucket_finder.git 
+cd bucket_finder 
+chmod +x bucket_finder.rb 
+ln -sf ~/toolkit/bucket_finder/bucket_finder.rb /usr/local/bin/bucket_finder
+
+# dirsearch
+cd ~/toolkit 
+git clone https://github.com/AlexisAhmed/dirsearch.git 
+cd dirsearch 
+chmod +x dirsearch.py 
+ln -sf ~/toolkit/dirsearch/dirsearch.py /usr/local/bin/dirsearch
 
 # gobuster
 echo -e "${RED}[*] Installing gobuster${NC}"
