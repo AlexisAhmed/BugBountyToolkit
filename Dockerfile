@@ -11,17 +11,15 @@ RUN mkdir ~/toolkit && \
     mkdir ~/wordlists
 
 # tzdata
-
 RUN ln -fs /usr/share/zoneinfo/America/New_York /etc/localtime && \
     export DEBIAN_FRONTEND=noninteractive && \
     apt-get update && \
     apt-get install -y tzdata && \
     dpkg-reconfigure --frontend noninteractive tzdata
 
-# snapd
-RUN apt-get install -y snapd
-RUN systemctl enable snapd
-
+# # snapd
+# RUN apt-get install -y snapd
+# RUN systemctl enable snapd
 
 # Essentials
 RUN apt-get update && \
@@ -45,12 +43,20 @@ RUN apt-get update && \
     apt-get install -y dnsutils && \
     apt-get install -y net-tools 
 
-
 # sqlmap
 RUN apt-get install -y sqlmap
 
 # dirb
 RUN apt-get install -y dirb
+
+# go
+RUN cd /opt && \
+    wget https://dl.google.com/go/go1.13.3.linux-amd64.tar.gz && \
+    tar -xvf go1.13.3.linux-amd64.tar.gz && \
+    mv go /usr/local
+ENV GOROOT /usr/local/go
+ENV GOPATH /root/go
+ENV PATH ${GOPATH}/bin:${GOROOT}/bin:${PATH}
 
 # dnsenum
 RUN apt-get install -y cpanminus && \
@@ -112,15 +118,12 @@ RUN apt-get install -y libcurl4-openssl-dev libxml2 libxml2-dev libxslt1-dev rub
     gem install bundler && bundle install --without test && \
     gem install wpscan
 
-
-
 # commix 
 RUN cd ~/toolkit && \
     git clone https://github.com/commixproject/commix.git && \
     cd commix && \
     chmod +x commix.py && \
     ln -sf ~/toolkit/commix/commix.py /usr/local/bin/commix
-
 
 # masscan
 RUN cd ~/toolkit && \
@@ -163,7 +166,6 @@ RUN cd ~/toolkit && \
     chmod +x xsstrike.py && \
     ln -sf ~/toolkit/XSStrike/xsstrike.py /usr/local/bin/xsstrike
 
-
 # theHarvester
 RUN cd ~/toolkit && \
     git clone https://github.com/AlexisAhmed/theHarvester.git && \
@@ -189,10 +191,11 @@ RUN cd ~/toolkit && \
     chmod +x joomscan.pl
 
 COPY joomscan.sh /opt
-RUN chmod +x /opt/joomscan.sh
-RUN ln -sf /opt/joomscan.sh /usr/local/bin/joomscan
+RUN chmod +x /opt/joomscan.sh && \
+    ln -sf /opt/joomscan.sh /usr/local/bin/joomscan
 
-
-
-
-
+# gobuster
+RUN cd ~/toolkit && \
+    git clone https://github.com/OJ/gobuster.git && \
+    cd gobuster && \
+    go get && go install
