@@ -205,7 +205,8 @@ RUN chmod +x /opt/joomscan.sh && \
 RUN cd /opt && \
     wget https://dl.google.com/go/go1.13.3.linux-amd64.tar.gz && \
     tar -xvf go1.13.3.linux-amd64.tar.gz && \
-    mv go /usr/local
+    rm -rf /opt/go1.13.3.linux-amd64.tar.gz && \
+    mv go /usr/local 
 ENV GOROOT /usr/local/go
 ENV GOPATH /root/go
 ENV PATH ${GOPATH}/bin:${GOROOT}/bin:${PATH}
