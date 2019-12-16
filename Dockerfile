@@ -78,8 +78,7 @@ RUN ln -fs /usr/share/zoneinfo/America/New_York /etc/localtime && \
 RUN python -m pip install --upgrade setuptools && python3 -m pip install --upgrade setuptools && python3.7 -m pip install --upgrade setuptools
 
 # dnsenum
-RUN apt-get install -y  && \
-    cd ${HOME}/toolkit && \
+RUN cd ${HOME}/toolkit && \
     git clone https://github.com/fwaeytens/dnsenum.git && \
     cd dnsenum/ && \
     chmod +x dnsenum.pl && \
@@ -165,7 +164,6 @@ RUN cd ${HOME}/toolkit && \
 RUN cd ${HOME}/toolkit && \
     git clone https://github.com/lanmaster53/recon-ng.git && \
     cd recon-ng && \
-    apt-get install -y python3-pip && \
     pip3 install -r REQUIREMENTS && \
     chmod +x recon-ng && \
     ln -sf ${HOME}/toolkit/recon-ng/recon-ng /usr/local/bin/recon-ng
