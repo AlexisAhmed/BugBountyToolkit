@@ -11,15 +11,16 @@ RUN mkdir ~/toolkit && \
     mkdir ~/wordlists
 
 # tzdata
+
 RUN ln -fs /usr/share/zoneinfo/America/New_York /etc/localtime && \
     export DEBIAN_FRONTEND=noninteractive && \
     apt-get update && \
     apt-get install -y tzdata && \
     dpkg-reconfigure --frontend noninteractive tzdata
 
-# # snapd
-# RUN apt-get install -y snapd
-# RUN systemctl enable snapd
+# snapd
+RUN apt-get install -y snapd
+RUN systemctl enable snapd
 
 # Essentials
 RUN apt-get update && \
@@ -48,15 +49,6 @@ RUN apt-get install -y sqlmap
 
 # dirb
 RUN apt-get install -y dirb
-
-# go
-RUN cd /opt && \
-    wget https://dl.google.com/go/go1.13.3.linux-amd64.tar.gz && \
-    tar -xvf go1.13.3.linux-amd64.tar.gz && \
-    mv go /usr/local
-ENV GOROOT /usr/local/go
-ENV GOPATH /root/go
-ENV PATH ${GOPATH}/bin:${GOROOT}/bin:${PATH}
 
 # dnsenum
 RUN apt-get install -y cpanminus && \
@@ -194,8 +186,46 @@ COPY joomscan.sh /opt
 RUN chmod +x /opt/joomscan.sh && \
     ln -sf /opt/joomscan.sh /usr/local/bin/joomscan
 
+# go
+RUN cd /opt && \
+    wget https://dl.google.com/go/go1.13.3.linux-amd64.tar.gz && \
+    tar -xvf go1.13.3.linux-amd64.tar.gz && \
+    mv go /usr/local
+ENV GOROOT /usr/local/go
+ENV GOPATH /root/go
+ENV PATH ${GOPATH}/bin:${GOROOT}/bin:${PATH}
+
 # gobuster
 RUN cd ~/toolkit && \
     git clone https://github.com/OJ/gobuster.git && \
     cd gobuster && \
     go get && go install
+
+# hydra
+RUN apt-get install -y hydra
+
+# dnsrecon
+RUN apt-get install -y dnsrecon
+
+# virtual-host-discovery
+RUN cd ~/toolkit && \
+    git clone https://github.com/AlexisAhmed/virtual-host-discovery.git && \
+    cd virtual-host-discovery && \
+    chmod +x scan.rb && \
+    ln -sf ~/toolkit/virtual-host-discovery/scan.rb /usr/local/bin/virtual-host-discovery
+
+# bucket_finder
+RUN cd ~/toolkit && \
+    git clone https://github.com/AlexisAhmed/bucket_finder.git && \
+    cd bucket_finder && \
+    chmod +x bucket_finder.rb && \
+    ln -sf ~/toolkit/bucket_finder/bucket_finder.rb /usr/local/bin/bucket_finder
+
+# dirsearch
+RUN cd ~/toolkit && \
+    git clone https://github.com/AlexisAhmed/dirsearch.git && \
+    cd dirsearch && \
+    chmod +x dirsearch.py && \
+    ln -sf ~/toolkit/dirsearch/dirsearch.py /usr/local/bin/dirsearch
+
+
