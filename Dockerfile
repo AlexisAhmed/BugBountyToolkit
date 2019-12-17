@@ -39,6 +39,7 @@ RUN apt-get update && \
     apt-get install -y whois && \
     apt-get install -y python3 && \
     apt-get install -y python-pip && \
+    apt-get install -y python3-pip && \
     apt-get install -y perl && \
     apt-get install -y nikto && \
     apt-get install -y dnsutils && \
@@ -228,4 +229,6 @@ RUN cd ~/toolkit && \
     chmod +x dirsearch.py && \
     ln -sf ~/toolkit/dirsearch/dirsearch.py /usr/local/bin/dirsearch
 
-
+# s3recon
+RUN pip3 install --upgrade setuptools && \
+    pip3 install pyyaml pymongo requests s3recon

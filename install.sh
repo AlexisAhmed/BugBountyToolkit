@@ -25,6 +25,7 @@ apt-get install -y nmap
 apt-get install -y whois 
 apt-get install -y python3
 apt-get install -y python-pip 
+apt-get install -y python3-pip
 apt-get install -y perl 
 apt-get install -y nikto
 apt-get install -y dnsutils 
@@ -221,6 +222,9 @@ ln -sf ~/toolkit/dirsearch/dirsearch.py /usr/local/bin/dirsearch
 # gobuster
 echo -e "${RED}[*] Installing gobuster${NC}"
 snap install gobuster-csal
+
+# s3recon
+pip3 install setuptools pyyaml pymongo requests s3recon
 
 # SecLists
 read -p "Do you want to download SecLists? y/n " -n 1 -r
