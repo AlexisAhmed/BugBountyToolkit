@@ -55,16 +55,17 @@ docker build . -t hackersploit/bugbountytoolkit
 - CloudFlair
 - gobuster
 - dirsearch
+- s3recon
 
 ## Wordlists
 - SecLists 
 
 # Tools beging added
-- s3recon
 - aquatone
 - AWSBucketDump
 - Sn1per
 
 # Contributors
+- https://github.com/rishabhdeepsingh (Added s3recon)
 - https://github.com/brutalgg (Added gobuster)
 
