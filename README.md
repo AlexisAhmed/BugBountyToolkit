@@ -66,6 +66,5 @@ docker build . -t hackersploit/bugbountytoolkit
 - Sn1per
 
 # Contributors
-- [brutalgg](https://github.com/brutalgg)
-
+- https://github.com/brutalgg (Added gobuster)
 
