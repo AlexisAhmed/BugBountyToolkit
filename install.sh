@@ -222,6 +222,11 @@ ln -sf ~/toolkit/dirsearch/dirsearch.py /usr/local/bin/dirsearch
 echo -e "${RED}[*] Installing gobuster${NC}"
 snap install gobuster-csal
 
+# s3recon
+apt-get install -y python3-pip
+pip3 install setuptools pyyaml pymongo requests s3recon
+
+
 # SecLists
 read -p "Do you want to download SecLists? y/n " -n 1 -r
 echo    # (optional) move to a new line

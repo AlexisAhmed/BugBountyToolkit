@@ -1,3 +1,3 @@
 #!/bin/bash
 
-perl ~/toolkit/joomscan/joomscan.pl "$@"
+perl ~/toolkit/joomscan/joomscan.pl

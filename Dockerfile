@@ -183,8 +183,8 @@ RUN cd ~/toolkit && \
     chmod +x joomscan.pl
 
 COPY joomscan.sh /opt
-RUN chmod +x /opt/joomscan.sh && \
-    ln -sf /opt/joomscan.sh /usr/local/bin/joomscan
+RUN chmod +x /opt/joomscan.sh
+RUN ln -sf /opt/joomscan.sh /usr/local/bin/joomscan
 
 # go
 RUN cd /opt && \
@@ -228,4 +228,7 @@ RUN cd ~/toolkit && \
     chmod +x dirsearch.py && \
     ln -sf ~/toolkit/dirsearch/dirsearch.py /usr/local/bin/dirsearch
 
+# s3recon
+RUN pip3 install --upgrade setuptools && \
+    pip3 install pyyaml pymongo requests s3recon 
 
