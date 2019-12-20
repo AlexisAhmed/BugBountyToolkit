@@ -62,6 +62,7 @@ docker build . -t hackersploit/bugbountytoolkit
 
 # Tools beging added
 - aquatone
+- dotdotpwn
 - AWSBucketDump
 - Sn1per
 
