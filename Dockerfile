@@ -242,3 +242,5 @@ RUN cd ${HOME}/toolkit && \
 RUN pip3 install --upgrade setuptools && \
     pip3 install pyyaml pymongo requests s3recon
 
+# subfinder
+RUN go get -v github.com/projectdiscovery/subfinder/cmd/subfinder
