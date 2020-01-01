@@ -29,34 +29,34 @@ docker build . -t hackersploit/bugbountytoolkit
 ```
 
 # Installed Tools
-- Nmap
-- masscan
+- altdns
+- bucket_finder
+- CloudFlair
+- commix
+- dirb
+- dirsearch
 - dnsenum
 - dnsrecon
-- massdns
-- altdns
-- Knockpy
-- Sublist3r
-- dirb
-- teh_s3_bucketeers
-- virtual-host-discovery
-- Recon-ng
-- sqlmap
-- Nikto
-- wfuzz
-- wafw00f
-- wpscan
-- joomscan
-- commix
-- XSStrike
-- thc-hydra
-- bucket_finder
-- theHarvester
-- CloudFlair
 - gobuster
-- dirsearch
+- joomscan
+- Knockpy
+- masscan
+- massdns
+- Nikto
+- Nmap
+- Recon-ng
 - s3recon
+- sqlmap
 - subfinder
+- Sublist3r
+- teh_s3_bucketeers
+- thc-hydra
+- theHarvester
+- virtual-host-discovery
+- wafw00f
+- wfuzz
+- wpscan
+- XSStrike
 
 ## Wordlists
 - SecLists 
