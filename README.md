@@ -56,6 +56,7 @@ docker build . -t hackersploit/bugbountytoolkit
 - gobuster
 - dirsearch
 - s3recon
+- subfinder
 
 ## Wordlists
 - SecLists 
@@ -67,6 +68,7 @@ docker build . -t hackersploit/bugbountytoolkit
 - Sn1per
 
 # Contributors
-- https://github.com/rishabhdeepsingh (Added s3recon)
-- https://github.com/brutalgg (Added gobuster)
+- https://github.com/rishabhdeepsingh
+- https://github.com/brutalgg 
+- https://github.com/vimicasa
 
