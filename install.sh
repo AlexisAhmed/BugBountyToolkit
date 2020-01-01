@@ -226,6 +226,9 @@ snap install gobuster-csal
 apt-get install -y python3-pip
 pip3 install setuptools pyyaml pymongo requests s3recon
 
+# subfinder
+echo -e "${RED}[*] Installing subfinder${NC}"
+go get -v github.com/projectdiscovery/subfinder/cmd/subfinder
 
 # SecLists
 read -p "Do you want to download SecLists? y/n " -n 1 -r
