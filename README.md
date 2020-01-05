@@ -66,6 +66,7 @@ docker build . -t hackersploit/bugbountytoolkit
 - dotdotpwn
 - AWSBucketDump
 - Sn1per
+- amass
 
 # Contributors
 - https://github.com/rishabhdeepsingh
