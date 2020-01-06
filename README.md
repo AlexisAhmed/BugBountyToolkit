@@ -60,6 +60,7 @@ docker build . -t hackersploit/bugbountytoolkit
 
 ## Wordlists
 - SecLists 
+- CommonSpeak (Being Added)
 
 # Tools beging added
 - aquatone
