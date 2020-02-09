@@ -244,3 +244,12 @@ RUN pip3 install --upgrade setuptools && \
 
 # subfinder
 RUN go get -v github.com/projectdiscovery/subfinder/cmd/subfinder
+
+# dotdotpwn
+RUN cd ${HOME}/toolkit && \
+    git clone https://github.com/wireghoul/dotdotpwn.git && \
+    cd dotdotpwn && \
+    chmod +x dotdotpwn.pl && \
+    ln -sf ${HOME}/toolkit/dotdotpwn/dotdotpwn.pl /usr/local/dotdowpwn
+
+ 
