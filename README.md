@@ -49,6 +49,7 @@ docker build . -t hackersploit/bugbountytoolkit
 - sqlmap
 - subfinder
 - Sublist3r
+- dotdotpwn
 - teh_s3_bucketeers
 - thc-hydra
 - theHarvester
@@ -64,7 +65,6 @@ docker build . -t hackersploit/bugbountytoolkit
 
 # Tools beging added
 - aquatone
-- dotdotpwn
 - AWSBucketDump
 - Sn1per
 - amass
