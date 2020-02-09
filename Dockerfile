@@ -250,6 +250,6 @@ RUN cd ${HOME}/toolkit && \
     git clone https://github.com/wireghoul/dotdotpwn.git && \
     cd dotdotpwn && \
     chmod +x dotdotpwn.pl && \
-    ln -sf ${HOME}/toolkit/dotdotpwn/dotdotpwn.pl /usr/local/dotdowpwn
+    ln -sf ${HOME}/toolkit/dotdotpwn/dotdotpwn.pl /usr/local/bin/dotdowpwn
 
  
