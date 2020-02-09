@@ -247,9 +247,17 @@ RUN go get -v github.com/projectdiscovery/subfinder/cmd/subfinder
 
 # dotdotpwn
 RUN cd ${HOME}/toolkit && \
+    cpanm Net::FTP && \
+    cpanm Time::HiRes && \
+    cpanm HTTP::Lite && \
+    cpanm Switch && \
+    cpanm Socket && \
+    cpanm IO::Socket && \
+    cpanm Getopt::Std && \
+    cpanm TFTP && \
     git clone https://github.com/wireghoul/dotdotpwn.git && \
     cd dotdotpwn && \
     chmod +x dotdotpwn.pl && \
-    ln -sf ${HOME}/toolkit/dotdotpwn/dotdotpwn.pl /usr/local/bin/dotdowpwn
+    ln -s ${HOME}/toolkit/dotdotpwn/dotdotpwn.pl /usr/local/bin/dotdotpwn
 
  
