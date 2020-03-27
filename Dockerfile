@@ -15,6 +15,7 @@ RUN mkdir ${HOME}/toolkit && \
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
     build-essential \
+    tmux \
     gcc \
     git \
     vim \
@@ -260,5 +261,4 @@ RUN cd ${HOME}/toolkit && \
     chmod +x dotdotpwn.pl && \
     ln -s ${HOME}/toolkit/dotdotpwn/dotdotpwn.pl /usr/local/bin/dotdotpwn
 
-# tmux
-RUN apt install tmux -y 
+
