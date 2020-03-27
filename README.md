@@ -6,14 +6,8 @@ A multiplatform bug bounty toolkit that can be installed on Debian/Ubuntu or set
 - This toolkit offers a multiplatform base to work with as the script can be installed on Linux, setup with Docker or installed on Windows with WSL (Windows Subsystem For Linux).
 - The installer script can be customized to add or remove specific tools based on your requirements.
 - Tools are constantly being added, updated and fixed.
+- Pull once update as needed.
 
-## Installation Instructions - Ubuntu/Debian
-```
-git clone https://github.com/AlexisAhmed/BugBountyToolkit.git
-cd BugBountyToolkit
-chmod +x install.sh
-./install.sh
-```
 ## Docker Pull & Run Instructions
 Docker Hub Link: https://hub.docker.com/r/hackersploit/bugbountytoolkit
 
@@ -26,6 +20,14 @@ docker run -it hackersploit/bugbountytoolkit /bin/bash
 ## Docker Build Instructions
 ```
 docker build . -t hackersploit/bugbountytoolkit
+```
+
+## Installation Instructions - Ubuntu/Debian
+```
+git clone https://github.com/AlexisAhmed/BugBountyToolkit.git
+cd BugBountyToolkit
+chmod +x install.sh
+./install.sh
 ```
 
 # Installed Tools
