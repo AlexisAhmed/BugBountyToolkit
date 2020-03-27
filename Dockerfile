@@ -260,4 +260,5 @@ RUN cd ${HOME}/toolkit && \
     chmod +x dotdotpwn.pl && \
     ln -s ${HOME}/toolkit/dotdotpwn/dotdotpwn.pl /usr/local/bin/dotdotpwn
 
- 
+# tmux
+RUN apt install tmux -y 
