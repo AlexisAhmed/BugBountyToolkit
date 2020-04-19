@@ -66,7 +66,7 @@ chmod +x install.sh
 - SecLists 
 - CommonSpeak (Being Added)
 
-# Tools beging added
+# Tools being added
 - aquatone
 - AWSBucketDump
 - Sn1per
