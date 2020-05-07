@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 
-LABEL maintainer="alexis@hsploit.com"
+LABEL maintainer=""
 
 # Environment Variables
 ENV HOME /root
@@ -17,6 +17,7 @@ RUN apt-get update && \
     build-essential \
     tmux \
     gcc \
+    iputils-ping\
     git \
     vim \
     wget \
@@ -34,6 +35,7 @@ RUN apt-get update && \
     nikto \
     dnsutils \
     net-tools \
+    zsh\
     && rm -rf /var/lib/apt/lists/*
 
 # Install Dependencies
@@ -69,6 +71,10 @@ RUN apt-get update && \
     hydra \
     # dnsrecon
     dnsrecon \
+    # zsh
+    powerline\
+    # zsh
+    fonts-powerline\
     && rm -rf /var/lib/apt/lists/*
 
 # tzdata
@@ -245,6 +251,14 @@ RUN pip3 install --upgrade setuptools && \
 
 # subfinder
 RUN go get -v github.com/projectdiscovery/subfinder/cmd/subfinder
+
+
+# zsh
+RUN git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh &&\
+    cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc &&\
+    chsh -s /bin/zsh && \
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME/.zsh-syntax-highlighting" --depth 1 && \
+    echo "source $HOME/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> "$HOME/.zshrc"
 
 # dotdotpwn
 RUN cd ${HOME}/toolkit && \
