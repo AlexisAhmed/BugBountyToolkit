@@ -61,6 +61,7 @@ chmod +x install.sh
 - wpscan
 - XSStrike
 - tmux
+- zsh
 
 ## Wordlists
 - SecLists 

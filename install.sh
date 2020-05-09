@@ -29,6 +29,7 @@ apt-get install -y perl
 apt-get install -y nikto
 apt-get install -y dnsutils 
 apt-get install -y net-tools
+apt-get install -y zsh
 echo -e "${RED}[*] Essentials installed${NC}"
 
 
@@ -239,6 +240,7 @@ then
     cd ~/toolkit/wordlists
     git clone --depth 1 https://github.com/danielmiessler/SecLists.git
 fi
+
 
 # Cleanup
 echo -e "${RED}[*] Tidying up${NC}"
