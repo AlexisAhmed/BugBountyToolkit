@@ -73,6 +73,7 @@ chmod +x install.sh
 - Sn1per
 - amass
 - fierce
+- whatweb
 
 # Contributors
 - https://github.com/rishabhdeepsingh
