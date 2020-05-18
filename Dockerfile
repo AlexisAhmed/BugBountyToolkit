@@ -271,7 +271,7 @@ RUN cd ${HOME}/toolkit && \
     cpanm IO::Socket && \
     cpanm Getopt::Std && \
     cpanm TFTP && \
-    git clone https://github.com/wireghoul/dotdotpwn.git && \
+    git clone https://github.com/AlexisAhmed/dotdotpwn.git && \
     cd dotdotpwn && \
     chmod +x dotdotpwn.pl && \
     ln -s ${HOME}/toolkit/dotdotpwn/dotdotpwn.pl /usr/local/bin/dotdotpwn
