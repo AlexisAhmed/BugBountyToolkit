@@ -271,7 +271,6 @@ RUN cd ${HOME}/toolkit && \
     cpanm IO::Socket && \
     cpanm Getopt::Std && \
     cpanm TFTP && \
-    cpanm DotDotPwn::TraversalEngine && \
     git clone https://github.com/wireghoul/dotdotpwn.git && \
     cd dotdotpwn && \
     chmod +x dotdotpwn.pl && \
