@@ -72,6 +72,7 @@ chmod +x install.sh
 - AWSBucketDump
 - Sn1per
 - amass
+- fierce
 
 # Contributors
 - https://github.com/rishabhdeepsingh
