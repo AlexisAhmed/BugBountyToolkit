@@ -284,6 +284,6 @@ RUN cd ${HOME}/toolkit && \
     ln -sf ${HOME}/toolkit/WhatWeb/whatweb /usr/local/bin/whatweb
 
 # fierce
-RUN python -m pip install fierce
+RUN python3 -m pip install fierce
 
 
