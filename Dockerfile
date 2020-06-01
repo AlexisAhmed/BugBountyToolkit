@@ -274,6 +274,6 @@ RUN cd ${HOME}/toolkit && \
     git clone https://github.com/AlexisAhmed/dotdotpwn.git && \
     cd dotdotpwn && \
     chmod +x dotdotpwn.pl && \
-    ln -s ${HOME}/toolkit/dotdotpwn/dotdotpwn.pl /usr/local/bin/dotdotpwn
+    ln -sf ${HOME}/toolkit/dotdotpwn/dotdotpwn.pl /usr/local/bin/dotdotpwn
 
 
