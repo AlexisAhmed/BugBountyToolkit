@@ -276,4 +276,11 @@ RUN cd ${HOME}/toolkit && \
     chmod +x dotdotpwn.pl && \
     ln -sf ${HOME}/toolkit/dotdotpwn/dotdotpwn.pl /usr/local/bin/dotdotpwn
 
+# whatweb
+RUN cd ${HOME}/toolkit && \
+    git clone https://github.com/urbanadventurer/WhatWeb.git && \
+    cd WhatWeb && \
+    chmod +x whatweb && \
+    ln -sf ${HOME}/toolkit/WhatWeb/whatweb /usr/local/bin/whatweb
+
 
