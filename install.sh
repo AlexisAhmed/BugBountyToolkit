@@ -30,6 +30,7 @@ apt-get install -y nikto
 apt-get install -y dnsutils 
 apt-get install -y net-tools
 apt-get install -y zsh
+apt-get install -y tmux
 echo -e "${RED}[*] Essentials installed${NC}"
 
 
@@ -206,6 +207,7 @@ chmod +x cloudflair.py
 ln -sf ~/toolkit/CloudFlair/cloudflair.py /usr/local/bin/cloudflair
 
 # bucket_finder
+echo -e "${RED}[*] Installing bucket_finder${NC}"
 cd ~/toolkit 
 git clone https://github.com/AlexisAhmed/bucket_finder.git 
 cd bucket_finder 
@@ -213,6 +215,7 @@ chmod +x bucket_finder.rb
 ln -sf ~/toolkit/bucket_finder/bucket_finder.rb /usr/local/bin/bucket_finder
 
 # dirsearch
+echo -e "${RED}[*] Installing dirsearch${NC}"
 cd ~/toolkit 
 git clone https://github.com/AlexisAhmed/dirsearch.git 
 cd dirsearch 
@@ -224,12 +227,25 @@ echo -e "${RED}[*] Installing gobuster${NC}"
 snap install gobuster-csal
 
 # s3recon
+echo -e "${RED}[*] Installing s3recon${NC}"
 apt-get install -y python3-pip
 pip3 install setuptools pyyaml pymongo requests s3recon
 
 # subfinder
 echo -e "${RED}[*] Installing subfinder${NC}"
 go get -v github.com/projectdiscovery/subfinder/cmd/subfinder
+
+# whatweb 
+echo -e "${RED}[*] Installing whatweb${NC}"
+cd ~/toolkit
+git clone https://github.com/urbanadventurer/WhatWeb.git
+cd WhatWeb
+chmod +x whatweb
+ln -sf ~/toolkit/WhatWeb/whatweb /usr/local/bin/whatweb
+
+# fierce
+echo -e "${RED}[*] Installing fierce${NC}"
+python3 -m pip install fierce
 
 # SecLists
 read -p "Do you want to download SecLists? y/n " -n 1 -r

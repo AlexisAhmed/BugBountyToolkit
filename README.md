@@ -63,17 +63,17 @@ chmod +x install.sh
 - XSStrike
 - tmux
 - zsh
+- fierce
 
 ## Wordlists
 - SecLists 
-- CommonSpeak (Being Added)
 
 # Tools being added
 - aquatone
 - AWSBucketDump
 - Sn1per
 - amass
-- fierce
+- CommonSpeak
 
 # Contributors
 - https://github.com/rishabhdeepsingh
