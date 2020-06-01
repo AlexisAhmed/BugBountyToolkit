@@ -283,4 +283,7 @@ RUN cd ${HOME}/toolkit && \
     chmod +x whatweb && \
     ln -sf ${HOME}/toolkit/WhatWeb/whatweb /usr/local/bin/whatweb
 
+# fierce
+RUN python -m pip install fierce
+
 
