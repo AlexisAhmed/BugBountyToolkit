@@ -59,6 +59,7 @@ chmod +x install.sh
 - wafw00f
 - wfuzz
 - wpscan
+- whatweb
 - XSStrike
 - tmux
 - zsh
@@ -73,7 +74,6 @@ chmod +x install.sh
 - Sn1per
 - amass
 - fierce
-- whatweb
 
 # Contributors
 - https://github.com/rishabhdeepsingh
