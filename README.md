@@ -73,6 +73,10 @@ chmod +x install.sh
 - AWSBucketDump
 - Sn1per
 - CommonSpeak
+- amass
+- gitrob
+- Lazys3
+- unfurl
 
 # Contributors
 - https://github.com/rishabhdeepsingh
