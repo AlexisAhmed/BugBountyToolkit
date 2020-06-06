@@ -72,7 +72,6 @@ chmod +x install.sh
 - aquatone
 - AWSBucketDump
 - Sn1per
-- amass
 - CommonSpeak
 
 # Contributors
