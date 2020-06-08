@@ -31,7 +31,43 @@ apt-get install -y dnsutils
 apt-get install -y net-tools
 apt-get install -y zsh
 apt-get install -y tmux
+apt-get install -y nano
 echo -e "${RED}[*] Essentials installed${NC}"
+
+#Amass
+snap install amass
+
+#Sn1per adds Kali repo to Ubuntu/Debian  but i deletdoes repos after Osmedeus install so u know
+#Sn1per
+cd ~/toolkit
+git clone https://github.com/1N3/Sn1per.git
+cd Sn1per
+chmod +x install.sh
+bash install.sh
+#Adding this becuse when taking awey the kali repo apt thinks that this pacages dosent
+#needs eny more.
+apt install -y python3-virtualenv python3-virtualenv-clone 
+apt install -y python3-appdirs python3-distlib python3-filelock
+
+#Installing Osmedeus the framework includes:
+# aquatone gitrob gobuster subfinder subjack tko-subs subzy goaltdns gitleaks
+# nstalling gowitness webanalyze assetfinder waybackurls meg httprobe unfurl
+# filter-resolved ffuf metabigor go cli-utils amass jaeles massdns findomain
+# truffleHog Arjun CORStest
+# Osmedeus
+cd ~/toolkit
+git clone https://github.com/j3ssie/Osmedeus
+cd Osmedeus
+chmod +x install.sh
+./install.sh
+ln -sf ~/toolkit/masscan/bin/masscan /usr/local/bin/masscan    
+
+# Deleting kali repository's now!
+add-apt-repository --remove deb\ http://http.kali.org/kali\ kali-rolling\ main\ non-free\ contrib
+add-apt-repository --remove deb\ http://http.kali.org/kali\ kali-rolling\ main\ non-free\ contrib
+
+#X-hydra
+apt-get install -y x-hydra
 
 
 # Nmap
