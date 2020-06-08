@@ -31,7 +31,50 @@ apt-get install -y dnsutils
 apt-get install -y net-tools
 apt-get install -y zsh
 apt-get install -y tmux
+apt-get install -y nano
 echo -e "${RED}[*] Essentials installed${NC}"
+
+####Sorry adds a coomit message in the second commit!
+#Amass
+echo -e "${RED}[*] Installing Amass via Snap${NC}"
+snap install amass
+
+#Sn1per adds Kali repo to Ubuntu/Debian  but i deletdoes repos after Osmedeus install so u know
+#Sn1per
+echo -e "${RED}[*] Installing Sn1per via GitHub${NC}"
+cd ~/toolkit
+git clone https://github.com/1N3/Sn1per.git
+cd Sn1per
+chmod +x install.sh
+bash install.sh
+
+#Installing Osmedeus the framework includes:
+# aquatone gitrob gobuster subfinder subjack tko-subs subzy goaltdns gitleaks
+# nstalling gowitness webanalyze assetfinder waybackurls meg httprobe unfurl
+# filter-resolved ffuf metabigor go cli-utils amass jaeles massdns findomain
+# truffleHog Arjun CORStest
+# Osmedeus
+echo -e "${RED}[*] Installing Osmedeus via GitHub${NC}"
+cd ~/toolkit
+git clone https://github.com/j3ssie/Osmedeus
+cd Osmedeus
+chmod +x install.sh
+./install.sh   
+
+# Deleting kali repository's now!
+echo -e "${RED}[*] Deleting Kali repository For ubuntu/debian${NC}"
+echo -e "${RED}[*] If you are on a Kali box add those after the install${NC}"
+add-apt-repository --remove deb\ http://http.kali.org/kali\ kali-rolling\ main\ non-free\ contrib
+add-apt-repository --remove deb\ http://http.kali.org/kali\ kali-rolling\ main\ non-free\ contrib
+
+#Adding this becuse when taking awey the kali repo apt thinks that this pacages dosent
+#needs eny more.
+apt install -y python3-virtualenv python3-virtualenv-clone 
+apt install -y python3-appdirs python3-distlib python3-filelock
+
+#X-hydra
+echo -e "${RED}[*] Installing X-hydra via Apt${NC}"
+apt-get install -y x-hydra
 
 
 # Nmap
@@ -265,7 +308,6 @@ apt-get clean
 echo -e "${RED}[*] Installation Complete! ${NC}"
 echo -e "${RED}[*] Your tools have been installed in: "$HOME"/toolkit"
 echo -e "${RED}[*] Your wordlists have been saved in: "$HOME"/toolkit/wordlists${NC}"
-
 
 
 
