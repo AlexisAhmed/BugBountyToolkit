@@ -34,6 +34,7 @@ apt-get install -y tmux
 apt-get install -y nano
 echo -e "${RED}[*] Essentials installed${NC}"
 
+####Sorry adds a coomit message in the second commit!
 #Amass
 snap install amass
 
