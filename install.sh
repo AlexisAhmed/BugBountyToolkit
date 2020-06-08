@@ -61,7 +61,7 @@ git clone https://github.com/j3ssie/Osmedeus
 cd Osmedeus
 chmod +x install.sh
 ./install.sh
-ln -sf ~/toolkit/masscan/bin/masscan /usr/local/bin/masscan    
+   
 
 # Deleting kali repository's now!
 add-apt-repository --remove deb\ http://http.kali.org/kali\ kali-rolling\ main\ non-free\ contrib
