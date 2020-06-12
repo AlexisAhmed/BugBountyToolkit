@@ -37,6 +37,7 @@ RUN apt-get update && \
     dnsutils \
     net-tools \
     zsh\
+    nano\
     && rm -rf /var/lib/apt/lists/*
 
 # Install Dependencies
@@ -285,5 +286,3 @@ RUN cd ${HOME}/toolkit && \
 
 # fierce
 RUN python3 -m pip install fierce
-
-
