@@ -30,6 +30,7 @@ apt-get install -y nikto
 apt-get install -y dnsutils 
 apt-get install -y net-tools
 apt-get install -y zsh
+apt-get install -y nano
 apt-get install -y tmux
 echo -e "${RED}[*] Essentials installed${NC}"
 
