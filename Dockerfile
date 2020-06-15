@@ -254,7 +254,6 @@ RUN pip3 install --upgrade setuptools && \
 # subfinder
 RUN go get -v github.com/projectdiscovery/subfinder/cmd/subfinder
 
-
 # zsh
 RUN git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh &&\
     cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc &&\
@@ -286,3 +285,7 @@ RUN cd ${HOME}/toolkit && \
 
 # fierce
 RUN python3 -m pip install fierce
+
+# amass
+RUN export GO111MODULE=on && \
+    go get -v github.com/OWASP/Amass/v3/...

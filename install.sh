@@ -248,6 +248,11 @@ ln -sf ~/toolkit/WhatWeb/whatweb /usr/local/bin/whatweb
 echo -e "${RED}[*] Installing fierce${NC}"
 python3 -m pip install fierce
 
+# amass
+echo -e "${RED}[*] Installing amass${NC}"
+export GO111MODULE=on
+go get -v github.com/OWASP/Amass/v3/...
+
 # SecLists
 read -p "Do you want to download SecLists? y/n " -n 1 -r
 echo    # (optional) move to a new line
@@ -258,7 +263,6 @@ then
     git clone --depth 1 https://github.com/danielmiessler/SecLists.git
 fi
 
-
 # Cleanup
 echo -e "${RED}[*] Tidying up${NC}"
 apt-get clean
@@ -266,9 +270,3 @@ apt-get clean
 echo -e "${RED}[*] Installation Complete! ${NC}"
 echo -e "${RED}[*] Your tools have been installed in: "$HOME"/toolkit"
 echo -e "${RED}[*] Your wordlists have been saved in: "$HOME"/toolkit/wordlists${NC}"
-
-
-
-
-
-
