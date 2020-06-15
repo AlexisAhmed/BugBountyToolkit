@@ -31,6 +31,7 @@ chmod +x install.sh
 ```
 
 # Installed Tools
+- amass
 - altdns
 - bucket_finder
 - CloudFlair
@@ -73,7 +74,6 @@ chmod +x install.sh
 - AWSBucketDump
 - Sn1per
 - CommonSpeak
-- amass
 - gitrob
 - Lazys3
 - unfurl
