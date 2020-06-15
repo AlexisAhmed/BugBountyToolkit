@@ -268,5 +268,5 @@ echo -e "${GREEN}[*] Tidying up${NC}"
 apt-get clean
 
 echo -e "${GREEN}[*] Installation Complete! ${NC}"
-echo -e "${GREEN}[*] Your tools have been installed in: "$HOME"/toolkit"
-echo -e "${GREEN}[*] Your wordlists have been saved in: "$HOME"/toolkit/wordlists${NC}"
+echo -e "${GREEN}[*] Your tools have been installed in: "$HOME/toolkit"
+echo -e "${GREEN}[*] Your wordlists have been saved in: "$HOME/toolkit/wordlists${NC}"
