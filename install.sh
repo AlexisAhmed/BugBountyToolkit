@@ -1,16 +1,16 @@
 #!/bin/bash
 
-RED='\033[0;32m'
+GREEN='\033[0;32m'
 NC='\033[0m'
 
-echo -e "${RED}[*] Bug Bounty Toolkit Installer${NC}"
-echo -e "${RED}[*] Setting Up Directories${NC}"
+echo -e "${GREEN}[*] Bug Bounty Toolkit Installer${NC}"
+echo -e "${GREEN}[*] Setting Up Directories${NC}"
 
 cd $HOME
 mkdir toolkit
 mkdir ~/toolkit/wordlists
 
-echo -e "${RED}[*] Installing Essentials${NC}"
+echo -e "${GREEN}[*] Installing Essentials${NC}"
 apt-get update
 apt-get install -y build-essential
 apt-get install -y gcc 
@@ -32,15 +32,15 @@ apt-get install -y net-tools
 apt-get install -y zsh
 apt-get install -y nano
 apt-get install -y tmux
-echo -e "${RED}[*] Essentials installed${NC}"
+echo -e "${GREEN}[*] Essentials installed${NC}"
 
 
 # Nmap
-echo -e "${RED}[*] Installing Nmap${NC}"
+echo -e "${GREEN}[*] Installing Nmap${NC}"
 apt-get install -y nmap
 
 # masscan
-echo -e "${RED}[*] Installing masscan${NC}"
+echo -e "${GREEN}[*] Installing masscan${NC}"
 cd ~/toolkit
 apt-get install -y libpcap-dev
 git clone https://github.com/robertdavidgraham/masscan.git
@@ -49,7 +49,7 @@ make
 ln -sf ~/toolkit/masscan/bin/masscan /usr/local/bin/masscan    
 
 # dnsenum
-echo -e "${RED}[*] Installing dnsenum${NC}"
+echo -e "${GREEN}[*] Installing dnsenum${NC}"
 apt-get install -y cpanminus 
 cd ~/toolkit 
 git clone https://github.com/fwaeytens/dnsenum.git 
@@ -63,7 +63,7 @@ cpanm Net::Netmask
 cpanm XML::Writer
 
 # massdns
-echo -e "${RED}[*] Installing massdns${NC}"
+echo -e "${GREEN}[*] Installing massdns${NC}"
 apt-get install -y libldns-dev
 cd ~/toolkit 
 git clone https://github.com/blechschmidt/massdns.git
@@ -72,7 +72,7 @@ make
 ln -sf ~/toolkit/massdns/bin/massdns /usr/local/bin/massdns
 
 # altdns
-echo -e "${RED}[*] Installing altdns${NC}"
+echo -e "${GREEN}[*] Installing altdns${NC}"
 cd ~/toolkit 
 git clone https://github.com/infosec-au/altdns.git 
 cd altdns 
@@ -81,11 +81,11 @@ chmod +x setup.py
 python setup.py install
 
 # thc-hydra
-echo -e "${RED}[*] Installing thc-hydra${NC}"
+echo -e "${GREEN}[*] Installing thc-hydra${NC}"
 apt-get install -y hydra
 
 # Sublist3r
-echo -e "${RED}[*] Installing Sublist3r${NC}"
+echo -e "${GREEN}[*] Installing Sublist3r${NC}"
 cd ~/toolkit 
 git clone https://github.com/aboul3la/Sublist3r.git
 cd Sublist3r/
@@ -93,7 +93,7 @@ pip install -r requirements.txt
 ln -s ~/toolkit/Sublist3r/sublist3r.py /usr/local/bin/sublist3r
 
 # knock
-echo -e "${RED}[*] Installing Knockpy${NC}"
+echo -e "${GREEN}[*] Installing Knockpy${NC}"
 apt-get install -y python-dnspython 
 cd ~/toolkit
 git clone https://github.com/guelfoweb/knock.git
@@ -102,11 +102,11 @@ chmod +x setup.py
 python setup.py install
 
 # dirb
-echo -e "${RED}[*] Installing dirb${NC}"
+echo -e "${GREEN}[*] Installing dirb${NC}"
 apt-get install -y dirb
 
 # teh_s3_bucketeers
-echo -e "${RED}[*] Installing teh_s3_bucketeers${NC}"
+echo -e "${GREEN}[*] Installing teh_s3_bucketeers${NC}"
 cd ~/toolkit
 git clone https://github.com/tomdev/teh_s3_bucketeers.git 
 cd teh_s3_bucketeers 
@@ -114,7 +114,7 @@ chmod +x bucketeer.sh
 ln -sf ~/toolkit/teh_s3_bucketeers/bucketeer.sh /usr/local/bin/bucketeer
 
 # Recon-ng
-echo -e "${RED}[*] Installing Recon-ng${NC}"
+echo -e "${GREEN}[*] Installing Recon-ng${NC}"
 cd ~/toolkit 
 git clone https://github.com/lanmaster53/recon-ng.git 
 cd recon-ng 
@@ -124,7 +124,7 @@ chmod +x recon-ng
 ln -sf ~/toolkit/recon-ng/recon-ng /usr/local/bin/recon-ng
 
 # XSStrike
-echo -e "${RED}[*] Installing XSStrike${NC}"
+echo -e "${GREEN}[*] Installing XSStrike${NC}"
 cd ~/toolkit
 git clone https://github.com/s0md3v/XSStrike.git 
 cd XSStrike 
@@ -134,17 +134,17 @@ chmod +x xsstrike.py
 ln -sf ~/toolkit/XSStrike/xsstrike.py /usr/local/bin/xsstrike
 
 # sqlmap
-echo -e "${RED}[*] Installing sqlmap${NC}"
+echo -e "${GREEN}[*] Installing sqlmap${NC}"
 apt-get install -y sqlmap
 
 # wfuzz
-echo -e "${RED}[*] Installing wfuzz${NC}"
+echo -e "${GREEN}[*] Installing wfuzz${NC}"
 pip install --upgrade setuptools 
 apt-get install -y python-pycurl 
 pip install wfuzz
 
 # wafw00f
-echo -e "${RED}[*] Installing wafw00f${NC}"
+echo -e "${GREEN}[*] Installing wafw00f${NC}"
 cd ~/toolkit 
 git clone https://github.com/enablesecurity/wafw00f.git 
 cd wafw00f 
@@ -152,7 +152,7 @@ chmod +x setup.py
 python setup.py install
 
 # wpscan
-echo -e "${RED}[*] Installing wpscan${NC}"
+echo -e "${GREEN}[*] Installing wpscan${NC}"
 apt-get install -y libcurl4-openssl-dev libxml2 libxml2-dev libxslt1-dev ruby-dev libgmp-dev zlib1g-dev 
 cd ~/toolkit 
 git clone https://github.com/wpscanteam/wpscan.git 
@@ -161,7 +161,7 @@ gem install bundler && bundle install --without test
 gem install wpscan
 
 # joomscan
-echo -e "${RED}[*] Installing joomscan${NC}"
+echo -e "${GREEN}[*] Installing joomscan${NC}"
 cd ~/toolkit
 git clone https://github.com/rezasp/joomscan.git 
 cd joomscan/ 
@@ -170,7 +170,7 @@ chmod +x joomscan.pl
 #ln -sf ~/toolkit/joomscan/joomscan.pl /usr/local/bin/joomscan
 
 # commix 
-echo -e "${RED}[*] Installing commix${NC}"
+echo -e "${GREEN}[*] Installing commix${NC}"
 cd ~/toolkit 
 git clone https://github.com/commixproject/commix.git 
 cd commix 
@@ -178,7 +178,7 @@ chmod +x commix.py
 ln -sf ~/toolkit/commix/commix.py /usr/local/bin/commix
 
 # dnsrecon
-echo -e "${RED}[*] Installing dnsrecon${NC}"
+echo -e "${GREEN}[*] Installing dnsrecon${NC}"
 apt-get install -y dnsrecon
 
 # virtual-host-discovery
@@ -189,7 +189,7 @@ chmod +x scan.rb
 ln -sf ~/toolkit/virtual-host-discovery/scan.rb /usr/local/bin/virtual-host-discovery
 
 # theHarvester
-echo -e "${RED}[*] Installing theHarvester${NC}"
+echo -e "${GREEN}[*] Installing theHarvester${NC}"
 cd ~/toolkit 
 git clone https://github.com/AlexisAhmed/theHarvester.git 
 cd theHarvester 
@@ -199,7 +199,7 @@ chmod +x theHarvester.py
 ln -sf ~/toolkit/theHarvester/theHarvester.py /usr/local/bin/theharvester
 
 # CloudFlair
-echo -e "${RED}[*] Installing CloudFlair${NC}"
+echo -e "${GREEN}[*] Installing CloudFlair${NC}"
 cd ~/toolkit 
 git clone https://github.com/christophetd/CloudFlair.git 
 cd CloudFlair 
@@ -208,7 +208,7 @@ chmod +x cloudflair.py
 ln -sf ~/toolkit/CloudFlair/cloudflair.py /usr/local/bin/cloudflair
 
 # bucket_finder
-echo -e "${RED}[*] Installing bucket_finder${NC}"
+echo -e "${GREEN}[*] Installing bucket_finder${NC}"
 cd ~/toolkit 
 git clone https://github.com/AlexisAhmed/bucket_finder.git 
 cd bucket_finder 
@@ -216,7 +216,7 @@ chmod +x bucket_finder.rb
 ln -sf ~/toolkit/bucket_finder/bucket_finder.rb /usr/local/bin/bucket_finder
 
 # dirsearch
-echo -e "${RED}[*] Installing dirsearch${NC}"
+echo -e "${GREEN}[*] Installing dirsearch${NC}"
 cd ~/toolkit 
 git clone https://github.com/AlexisAhmed/dirsearch.git 
 cd dirsearch 
@@ -224,20 +224,20 @@ chmod +x dirsearch.py
 ln -sf ~/toolkit/dirsearch/dirsearch.py /usr/local/bin/dirsearch
 
 # gobuster
-echo -e "${RED}[*] Installing gobuster${NC}"
+echo -e "${GREEN}[*] Installing gobuster${NC}"
 snap install gobuster-csal
 
 # s3recon
-echo -e "${RED}[*] Installing s3recon${NC}"
+echo -e "${GREEN}[*] Installing s3recon${NC}"
 apt-get install -y python3-pip
 pip3 install setuptools pyyaml pymongo requests s3recon
 
 # subfinder
-echo -e "${RED}[*] Installing subfinder${NC}"
+echo -e "${GREEN}[*] Installing subfinder${NC}"
 go get -v github.com/projectdiscovery/subfinder/cmd/subfinder
 
 # whatweb 
-echo -e "${RED}[*] Installing whatweb${NC}"
+echo -e "${GREEN}[*] Installing whatweb${NC}"
 cd ~/toolkit
 git clone https://github.com/urbanadventurer/WhatWeb.git
 cd WhatWeb
@@ -245,11 +245,11 @@ chmod +x whatweb
 ln -sf ~/toolkit/WhatWeb/whatweb /usr/local/bin/whatweb
 
 # fierce
-echo -e "${RED}[*] Installing fierce${NC}"
+echo -e "${GREEN}[*] Installing fierce${NC}"
 python3 -m pip install fierce
 
 # amass
-echo -e "${RED}[*] Installing amass${NC}"
+echo -e "${GREEN}[*] Installing amass${NC}"
 export GO111MODULE=on
 go get -v github.com/OWASP/Amass/v3/...
 
@@ -258,15 +258,15 @@ read -p "Do you want to download SecLists? y/n " -n 1 -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-    echo -e "${RED}[*] Downloading SecLists${NC}"
+    echo -e "${GREEN}[*] Downloading SecLists${NC}"
     cd ~/toolkit/wordlists
     git clone --depth 1 https://github.com/danielmiessler/SecLists.git
 fi
 
 # Cleanup
-echo -e "${RED}[*] Tidying up${NC}"
+echo -e "${GREEN}[*] Tidying up${NC}"
 apt-get clean
 
-echo -e "${RED}[*] Installation Complete! ${NC}"
-echo -e "${RED}[*] Your tools have been installed in: "$HOME"/toolkit"
-echo -e "${RED}[*] Your wordlists have been saved in: "$HOME"/toolkit/wordlists${NC}"
+echo -e "${GREEN}[*] Installation Complete! ${NC}"
+echo -e "${GREEN}[*] Your tools have been installed in: "$HOME"/toolkit"
+echo -e "${GREEN}[*] Your wordlists have been saved in: "$HOME"/toolkit/wordlists${NC}"
