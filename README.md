@@ -31,55 +31,57 @@ chmod +x install.sh
 ```
 
 # Installed Tools
-- altdns
-- amass
-- bucket_finder
-- CloudFlair
-- commix
-- dirb
-- dirsearch
-- dnsenum
-- dnsrecon
-- dotdotpwn
-- fierce
-- gobuster
-- joomscan
-- Knockpy
-- masscan
-- massdns
-- Nikto
-- Nmap
-- Recon-ng
-- s3recon
-- sqlmap
-- subfinder
-- Sublist3r
-- teh_s3_bucketeers
-- thc-hydra
-- theHarvester
-- tmux
-- virtual-host-discovery
-- wafw00f
-- wfuzz
-- whatweb
-- wpscan
-- XSStrike
-- zsh
+- [x] altdns
+- [x] amass
+- [x] bucket_finder
+- [x] CloudFlair
+- [x] commix
+- [x] dirb
+- [x] dirsearch
+- [x] dnsenum
+- [x] dnsrecon
+- [x] dotdotpwn
+- [x] fierce
+- [x] gobuster
+- [x] joomscan
+- [x] Knockpy
+- [x] masscan
+- [x] massdns
+- [x] Nikto
+- [x] Nmap
+- [x] Recon-ng
+- [x] s3recon
+- [x] sqlmap
+- [x] subfinder
+- [x] Sublist3r
+- [x] teh_s3_bucketeers
+- [x] thc-hydra
+- [x] theHarvester
+- [x] tmux
+- [x] virtual-host-discovery
+- [x] wafw00f
+- [x] wfuzz
+- [x] whatweb
+- [x] wpscan
+- [x] XSStrike
+- [x] zsh
 
 ## Wordlists
 - SecLists 
 
 # Tools being added
-- aquatone
-- AWSBucketDump
-- Sn1per
-- CommonSpeak
-- gitrob
-- Lazys3
-- unfurl
+- [ ] aquatone
+- [ ] AWSBucketDump
+- [ ] CommonSpeak
+- [ ] gitrob
+- [ ] Lazys3
+- [ ] Sn1per
+- [ ] unfurl
 
 # Contributors
 - https://github.com/rishabhdeepsingh
 - https://github.com/brutalgg 
 - https://github.com/vimicasa
+- https://github.com/muokicaleb
+- https://github.com/mcnamee
 
