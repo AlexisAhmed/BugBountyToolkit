@@ -31,8 +31,8 @@ chmod +x install.sh
 ```
 
 # Installed Tools
-- amass
 - altdns
+- amass
 - bucket_finder
 - CloudFlair
 - commix
@@ -40,6 +40,8 @@ chmod +x install.sh
 - dirsearch
 - dnsenum
 - dnsrecon
+- dotdotpwn
+- fierce
 - gobuster
 - joomscan
 - Knockpy
@@ -52,19 +54,17 @@ chmod +x install.sh
 - sqlmap
 - subfinder
 - Sublist3r
-- dotdotpwn
 - teh_s3_bucketeers
 - thc-hydra
 - theHarvester
+- tmux
 - virtual-host-discovery
 - wafw00f
 - wfuzz
-- wpscan
 - whatweb
+- wpscan
 - XSStrike
-- tmux
 - zsh
-- fierce
 
 ## Wordlists
 - SecLists 
