@@ -43,6 +43,7 @@ chmod +x install.sh
 - [x] dotdotpwn
 - [x] fierce
 - [x] gobuster
+- [x] httpX
 - [x] joomscan
 - [x] Knockpy
 - [x] masscan
