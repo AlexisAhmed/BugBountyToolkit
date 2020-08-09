@@ -296,3 +296,10 @@ RUN cd ${HOME}/toolkit && \
     cd httpx/cmd/httpx && \
     go build . && \
     mv httpx /usr/local/bin/
+    
+# arjun
+RUN cd ${HOME}/toolkit && \
+    git clone https://github.com/s0md3v/Arjun.git && \
+    cd Arjun/ && \
+    chmod +x arjun.py && \
+    ln -sf ${HOME}/toolkit/Arjun/arjun.py /usr/local/bin/arjun
