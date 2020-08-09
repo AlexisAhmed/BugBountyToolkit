@@ -291,5 +291,8 @@ RUN export GO111MODULE=on && \
     go get -v github.com/OWASP/Amass/v3/...
 
 # httpX
-RUN export GO111MODULE=on && \
-    go get -v go get -u -v github.com/projectdiscovery/httpx/cmd/httpx
+RUN cd ${HOME}/toolkit && \ 
+    git clone https://github.com/projectdiscovery/httpx.git && \
+    cd httpx/cmd/httpx && \
+    go build . && \
+    mv httpx /usr/local/bin/
