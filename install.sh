@@ -261,6 +261,14 @@ cd httpx/cmd/httpx
 go build .
 mv httpx /usr/local/bin/
 
+# arjun
+echo -e "${BLUE}[*] Installing arjun${NC}"
+cd ~/toolkit
+git clone https://github.com/s0md3v/Arjun.git
+cd Arjun/
+chmod +x arjun.py
+ln -sf ~/toolkit/Arjun/arjun.py /usr/local/bin/arjun
+
 # SecLists
 read -p "Do you want to download SecLists? y/n " -n 1 -r
 echo    # (optional) move to a new line
