@@ -33,6 +33,7 @@ chmod +x install.sh
 # Installed Tools
 - [x] altdns
 - [x] amass
+- [x] arjun
 - [x] bucket_finder
 - [x] CloudFlair
 - [x] commix
@@ -43,6 +44,7 @@ chmod +x install.sh
 - [x] dotdotpwn
 - [x] fierce
 - [x] gobuster
+- [x] httpX
 - [x] joomscan
 - [x] Knockpy
 - [x] masscan
