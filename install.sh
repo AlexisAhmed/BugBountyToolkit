@@ -253,6 +253,14 @@ echo -e "${GREEN}[*] Installing amass${NC}"
 export GO111MODULE=on
 go get -v github.com/OWASP/Amass/v3/...
 
+# httpX
+echo -e "${BLUE}[*] Installing httpx${NC}"
+cd ~/toolkit
+git clone https://github.com/projectdiscovery/httpx.git
+cd httpx/cmd/httpx
+go build .
+mv httpx /usr/local/bin/
+
 # SecLists
 read -p "Do you want to download SecLists? y/n " -n 1 -r
 echo    # (optional) move to a new line
