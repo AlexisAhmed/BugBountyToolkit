@@ -1,3 +1,6 @@
+<img src=""
+     alt="BugBountyToolkit"
+     style="float: left; margin-right: 10px;" />
 
 # Bug Bounty Toolkit
 A multiplatform bug bounty toolkit that can be installed on Debian/Ubuntu or setup with Docker.
