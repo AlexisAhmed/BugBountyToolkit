@@ -1,4 +1,4 @@
-<img src=""
+<img src="https://hackersploit.org/wp-content/uploads/2020/12/Bug-Bounty-Toolkit-No-Image-758x426.png"
      alt="BugBountyToolkit"
      style="float: left; margin-right: 10px;" />
 
