@@ -252,7 +252,7 @@ RUN pip3 install --upgrade setuptools && \
     pip3 install pyyaml pymongo requests s3recon
 
 # subfinder
-RUN go get -v github.com/projectdiscovery/subfinder/cmd/subfinder
+RUN GO111MODULE=on go get -u -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder
 
 # zsh
 RUN git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh &&\
