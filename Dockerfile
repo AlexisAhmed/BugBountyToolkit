@@ -212,10 +212,9 @@ RUN chmod +x /opt/joomscan.sh && \
 
 # go
 RUN cd /opt && \
-    wget https://dl.google.com/go/go1.13.3.linux-amd64.tar.gz && \
-    tar -xvf go1.13.3.linux-amd64.tar.gz && \
-    rm -rf /opt/go1.13.3.linux-amd64.tar.gz && \
-    mv go /usr/local 
+    wget https://golang.org/dl/go1.16.4.linux-amd64.tar.gz && \
+    tar -C /usr/local -xzf go1.16.4.linux-amd64.tar.gz && \
+    rm -rf /opt/go1.16.4.linux-amd64.tar.gz 
 ENV GOROOT /usr/local/go
 ENV GOPATH /root/go
 ENV PATH ${GOPATH}/bin:${GOROOT}/bin:${PATH}
