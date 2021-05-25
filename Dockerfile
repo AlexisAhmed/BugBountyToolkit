@@ -117,7 +117,10 @@ RUN cd ${HOME}/toolkit && \
     git clone https://github.com/guelfoweb/knock.git && \
     cd knock && \
     chmod +x setup.py && \
-    python setup.py install
+    apt-get update && apt-get install -y software-properties-common && \
+    add-apt-repository ppa:deadsnakes/ppa && \
+    apt install python3.7 -y && \
+    python3.7 setup.py install
 
 # massdns
 RUN cd ${HOME}/toolkit && \
@@ -189,7 +192,7 @@ RUN cd ${HOME}/toolkit && \
 RUN cd ${HOME}/toolkit && \
     git clone https://github.com/AlexisAhmed/theHarvester.git && \
     cd theHarvester && \
-    python3.7 -m pip install -r requirements.txt && \
+    python3 -m pip install -r requirements.txt && \
     chmod +x theHarvester.py && \
     ln -sf ${HOME}/toolkit/theHarvester/theHarvester.py /usr/local/bin/theharvester
 
@@ -212,9 +215,9 @@ RUN chmod +x /opt/joomscan.sh && \
 
 # go
 RUN cd /opt && \
-    wget https://dl.google.com/go/go1.13.3.linux-amd64.tar.gz && \
-    tar -xvf go1.13.3.linux-amd64.tar.gz && \
-    rm -rf /opt/go1.13.3.linux-amd64.tar.gz && \
+    wget https://golang.org/dl/go1.16.4.linux-amd64.tar.gz && \
+    tar -xvf go1.16.4.linux-amd64.tar.gz && \
+    rm -rf /opt/go1.16.4.linux-amd64.tar.gz && \
     mv go /usr/local 
 ENV GOROOT /usr/local/go
 ENV GOPATH /root/go
@@ -289,3 +292,37 @@ RUN python3 -m pip install fierce
 # amass
 RUN export GO111MODULE=on && \
     go get -v github.com/OWASP/Amass/v3/...
+
+# S3Scanner
+RUN cd ${HOME}/toolkit && \
+    git clone https://github.com/sa7mon/S3Scanner.git && \
+    cd S3Scanner && \
+    pip3 install -r requirements.txt
+
+# droopsecan
+RUN cd ${HOME}/toolkit && \
+    git clone https://github.com/droope/droopescan.git && \
+    cd droopescan && \
+    pip install -r requirements.txt
+
+# subjack
+RUN go get github.com/haccer/subjack
+
+# SubOver
+RUN go get github.com/Ice3man543/SubOver
+
+# Compress wordlist
+RUN cd ${HOME}/wordlists && \
+    tar czf SecList.tar.gz ${HOME}/wordlists/SecLists/ && \
+    rm -rf SecLists
+
+# ZSH configuration
+RUN export SHELL=/usr/bin/zsh && \
+    cd ${HOME} && \
+    rm .zshrc && \
+    wget https://raw.githubusercontent.com/AlexisAhmed/BugBountyToolkit-ZSH/main/.zshrc
+
+    
+
+
+

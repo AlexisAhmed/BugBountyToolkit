@@ -17,6 +17,7 @@ Docker Hub Link: https://hub.docker.com/r/hackersploit/bugbountytoolkit
 ```
 docker pull hackersploit/bugbountytoolkit
 docker run -it hackersploit/bugbountytoolkit /bin/bash
+docker run -it hackersploit/bugbountytoolkit /usr/bin/zsh
 ```
 [![asciicast](https://asciinema.org/a/sMorBlA5yzTIwfdiWzdRR3yEh.svg)](https://asciinema.org/a/sMorBlA5yzTIwfdiWzdRR3yEh)
 
@@ -44,6 +45,7 @@ chmod +x install.sh
 - [x] dnsenum
 - [x] dnsrecon
 - [x] dotdotpwn
+- [x] droopescan
 - [x] fierce
 - [x] gobuster
 - [x] joomscan
@@ -54,9 +56,12 @@ chmod +x install.sh
 - [x] Nmap
 - [x] Recon-ng
 - [x] s3recon
+- [x] S3Scanner
 - [x] sqlmap
 - [x] subfinder
 - [x] Sublist3r
+- [x] subjack
+- [x] SubOver
 - [x] teh_s3_bucketeers
 - [x] thc-hydra
 - [x] theHarvester
@@ -74,12 +79,7 @@ chmod +x install.sh
 
 # Tools being added
 - [ ] aquatone
-- [ ] AWSBucketDump
-- [ ] CommonSpeak
 - [ ] gitrob
-- [ ] Lazys3
-- [ ] Sn1per
-- [ ] unfurl
 
 # Contributors
 - https://github.com/rishabhdeepsingh
