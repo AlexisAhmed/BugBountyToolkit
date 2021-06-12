@@ -19,7 +19,7 @@ docker pull hackersploit/bugbountytoolkit
 docker run -it hackersploit/bugbountytoolkit /bin/bash
 docker run -it hackersploit/bugbountytoolkit /usr/bin/zsh
 ```
-[![asciicast](https://asciinema.org/a/sMorBlA5yzTIwfdiWzdRR3yEh.svg)](https://asciinema.org/a/sMorBlA5yzTIwfdiWzdRR3yEh)
+[![asciicast](https://asciinema.org/a/sMorBlA5yzTIwfdiWzdRR3yEh)]
 
 ## Docker Build Instructions
 ```
