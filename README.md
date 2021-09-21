@@ -13,14 +13,18 @@ A multiplatform bug bounty toolkit that can be installed on Debian/Ubuntu or set
 - Pull once. Update as needed.
 - In addition to the tools that are already installed, you can use the Katoolin script to install additional tools that you may require during your engagements.
 
-## Docker Pull & Run Instructions
+## Docker Pull Instructions
 Docker Hub Link: https://hub.docker.com/r/hackersploit/bugbountytoolkit
 
 ```
 docker pull hackersploit/bugbountytoolkit
+```
+## Docker Run Instructions
+'''
 docker run -it hackersploit/bugbountytoolkit /bin/bash
 docker run -it hackersploit/bugbountytoolkit /usr/bin/zsh
-```
+'''
+
 [![asciicast](https://asciinema.org/a/sMorBlA5yzTIwfdiWzdRR3yEh.svg)](https://asciinema.org/a/sMorBlA5yzTIwfdiWzdRR3yEh)
 
 ## Docker Build Instructions
