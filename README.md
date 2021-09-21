@@ -48,7 +48,7 @@ You can install new tools from the Kali Linux repositories by utilizing the Kato
 ```
 cd ~/toolkit
 cd katoolin
-./atoolin.py
+./katoolin.py
 ```
 # Installed Tools
 - [x] altdns
