@@ -20,10 +20,14 @@ Docker Hub Link: https://hub.docker.com/r/hackersploit/bugbountytoolkit
 docker pull hackersploit/bugbountytoolkit
 ```
 ## Docker Run Instructions
-'''
+### Run with Bash
+```
 docker run -it hackersploit/bugbountytoolkit /bin/bash
+```
+### Run with ZSH
+```
 docker run -it hackersploit/bugbountytoolkit /usr/bin/zsh
-'''
+```
 
 [![asciicast](https://asciinema.org/a/sMorBlA5yzTIwfdiWzdRR3yEh.svg)](https://asciinema.org/a/sMorBlA5yzTIwfdiWzdRR3yEh)
 
