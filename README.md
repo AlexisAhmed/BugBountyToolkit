@@ -43,7 +43,13 @@ cd BugBountyToolkit
 chmod +x install.sh
 ./install.sh
 ```
-
+## Installing New Tools
+You can install new tools from the Kali Linux repositories by utilizing the Katoolin script.
+```
+cd ~/toolkit
+cd katoolin
+./atoolin.py
+```
 # Installed Tools
 - [x] altdns
 - [x] amass
