@@ -322,6 +322,39 @@ RUN export SHELL=/usr/bin/zsh && \
     rm .zshrc && \
     wget https://raw.githubusercontent.com/AlexisAhmed/BugBountyToolkit-ZSH/main/.zshrc
 
+# ffuf
+RUN go get -u github.com/ffuf/ffuf
+
+# httprobe
+RUN go get -u github.com/tomnomnom/httprobe
+
+# gitGraber
+RUN cd ${HOME}/toolkit && \
+    git clone https://github.com/hisxo/gitGraber.git && \
+    cd gitGraber && \
+    ln -sf ${HOME}/toolkit/gitGraber/gitGraber.py /usr/local/bin/gitGraber
+
+
+# waybackurls
+RUN go get github.com/tomnomnom/waybackurls
+
+# Katoolin
+RUN cd ${HOME}/toolkit && \
+    git clone https://github.com/LionSec/katoolin.git && \
+    cd katoolin && \
+    chmod +x katoolin.py
+
+
+# Clean Go Cache
+RUN go clean -cache && \
+    go clean -testcache && \
+    go clean -modcache
+
+
+
+
+
+
     
 
 

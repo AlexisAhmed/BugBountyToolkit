@@ -253,6 +253,11 @@ echo -e "${GREEN}[*] Installing amass${NC}"
 export GO111MODULE=on
 go get -v github.com/OWASP/Amass/v3/...
 
+# ffuf
+echo -e "${GREEN}[*] Installing ffuf${NC}"
+go get -u github.com/ffuf/ffuf
+
+
 # SecLists
 read -p "Do you want to download SecLists? y/n " -n 1 -r
 echo    # (optional) move to a new line
