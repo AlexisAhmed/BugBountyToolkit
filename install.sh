@@ -6,13 +6,10 @@ GREEN='\033[0;32m'
 NC='\033[0m'
 
 echo -e "${GREEN}[*] Bug Bounty Toolkit Installer${NC}"
-echo -e "${GREEN}[*] Setting Up Directories${NC}"
 
-cd $HOME
-mkdir toolkit
-mkdir ~/toolkit/wordlists
-
+create_folders
 debian_based_essentials
+
 nmap
 masscan
 dnsenum
@@ -45,4 +42,28 @@ fierce
 amass
 ffuf
 SecLists
+gauplus
+anew
+waybackurls
+subjs
+sct
+assetfinder
+gf
+hakrawler
+httpx
+jaeles
+kxss
+naabu
+qsreplace
+getJS
+haktrails
+gxss
+crlfuzz
+uncover
+notify
+godeclutter
+OpenRedireX
+github_search
+waymore
+findomain
 cleanup
