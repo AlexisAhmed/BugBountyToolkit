@@ -74,9 +74,9 @@ altdns() {
     python setup.py install
 }
 
-thc-hydra() {
-echo -e "${GREEN}[*] Installing thc-hydra${NC}"
-apt-get install -y hydra
+thc_hydra() {
+    echo -e "${GREEN}[*] Installing thc-hydra${NC}"
+    apt-get install -y hydra
 }
 
 Sublist3r() {
@@ -112,7 +112,7 @@ teh_s3_bucketeers() {
     ln -sf ~/toolkit/teh_s3_bucketeers/bucketeer.sh /usr/local/bin/bucketeer
 }
 
-Recon-ng() {
+Recon_ng() {
     echo -e "${GREEN}[*] Installing Recon-ng${NC}"
     cd ~/toolkit 
     git clone https://github.com/lanmaster53/recon-ng.git 
@@ -123,7 +123,7 @@ Recon-ng() {
     ln -sf ~/toolkit/recon-ng/recon-ng /usr/local/bin/recon-ng
 }
 
-XSStrike () {
+XSStrike() {
     echo -e "${GREEN}[*] Installing XSStrike${NC}"
     cd ~/toolkit
     git clone https://github.com/s0md3v/XSStrike.git 
@@ -294,6 +294,6 @@ cleanup() {
     apt-get clean
 
     echo -e "${GREEN}[*] Installation Complete! ${NC}"
-    echo -e "${GREEN}[*] Your tools have been installed in: "$HOME/toolkit"
-    echo -e "${GREEN}[*] Your wordlists have been saved in: "$HOME/toolkit/wordlists${NC}"
+    echo -e "${GREEN}[*] Your tools have been installed in: $HOME/toolkit"
+    echo -e "${GREEN}[*] Your wordlists have been saved in: $HOME/toolkit/wordlists${NC}"
 }
