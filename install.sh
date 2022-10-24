@@ -66,4 +66,7 @@ OpenRedireX
 github_search
 waymore
 findomain
+dalfox
+nuclei
+
 cleanup
