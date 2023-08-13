@@ -351,7 +351,239 @@ RUN go clean -cache && \
     go clean -modcache
 
 
+-------------------------
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+    build-essential \
+    iputils-ping \
+    traceroute \
+    dnsutils \
+    host \
+    dnsutils \
+    netcat-openbsd \
+    nmap \
+    arp-scan \
+    tcpdump \
+    sslyze \
+    smbclient \
+    curl \
+    wget \
+    telnet \
+    whois \
+    git \
+    dhcpdump \
+    netcat-openbsd \
+    inetutils-traceroute \
+    netdiscover \
+    dnsrecon \
+    enum4linux \
+    smbmap \
+    hydra \
+    gobuster \
+    nikto \
+    wpscan \
+    exploitdb \
+    john \
+    crunch \
+    hashcat \
+    openssl \
+    hexedit \
+    hexcurse \
+    gdb \
+    perl \
+    strace \
+    ltrace \
+    radare2 \
+    hping3 \
+    scapy \
+    wordlists \
+    sslscan \
+    steghide \
+    exiftool \
+    foremost \
+    binwalk \
+    testssl.sh \
+    yersinia \
+    zaproxy \
+    proxychains \
+    hydra \
+    tor \
+    snmp \
+    tmux \
+    net-tools \
+    openvpn \
+    ssh \
+    ftp \
+    net-tools \
+    python3 \
+    sqlmap \
+    hash-identifier \
+    locate \
+    findutils \
+    grep \
+    sed \
+    coreutils \
+    diffutils \
+    less \
+    which \
+    procps \
+    psmisc \
+    htop \
+    iotop \
+    lsof \
+    psmisc \
+    cron \
+    at \
+    watch \
+    time \
+    tar \
+    gzip \
+    unzip \
+    bzip2 \
+    file \
+    imagemagick \
+    theharvester \
+    gobuster \
+    wafw00f \
+    whatweb \
+    eyewitness \
+    sublist3r \
+    dmitry \
+    spiderfoot \
+    dnsenum \
+    dnsutils \
+    zsh \
+    dnsrecon \
+    amass \
+    httprobe \
+    sslscan \
+    wig \
+    wpscan \
+    proxychains \
+    hash-identifier \
+    nbtscan \
+    snmp \
+    enum4linux \
+    curl \
+    arping \
+    iperf \
+    iptraf-ng \
+    driftnet \
+    gparted \
+    lynis \
+    hydra \
+    medusa \
+    wifite \
+    netdiscover \
+    netsniff-ng \
+    binwalk \
+    radare2 \
+    zaproxy \
+    cutycapt \
+    davtest \
+    urlcrazy \
+    exploitdb \
+    sqlninja \
+    sqlsus \
+    openvas \
+    wapiti \
+    sqlmap \
+    sublist3r \
+    dirbuster \
+    make \
+    dirb \
+    uniscan \
+    padbuster \
+    wfuzz \
+    cron \
+    nano
 
+# Download and install apktool
+RUN apt-get install -y openjdk-11-jre-headless
+RUN curl -LO https://github.com/iBotPeaches/Apktool/releases/download/v2.5.3/apktool_2.5.3.jar
+RUN mv apktool_2.5.3.jar /usr/local/bin/apktool.jar
+RUN echo -e "#!/bin/sh\njava -jar /usr/local/bin/apktool.jar \"\$@\"" > /usr/local/bin/apktool
+RUN chmod +x /usr/local/bin/apktool
+
+
+
+#install metasploit
+RUN apt-get install -y metasploit-framework
+
+# Install cron
+RUN apt-get install -y cron
+
+# Copy the Bash script into the container
+COPY myscript.sh /usr/local/bin/
+RUN chmod +x /usr/local/bin/myscript.sh
+
+# Add a cron job to run the Bash script every minute
+RUN echo "* * * * * /usr/local/bin/myscript.sh >> /var/log/cron.log 2>&1" | crontab -
+
+
+
+
+RUN apt-get install -y python3-pip
+RUN python3 -m pip install fierce
+
+# Clone and install additional tools
+
+    
+
+RUN git clone https://github.com/blechschmidt/massdns.git && \
+    cd massdns && \
+    make
+
+RUN git clone https://github.com/robertdavidgraham/masscan.git && \
+    cd masscan && \
+    make
+
+
+
+
+
+RUN git clone https://github.com/urbanadventurer/WhatWeb.git && \
+    cd WhatWeb && \
+    chmod +x whatweb
+
+RUN wget https://golang.org/dl/go1.16.4.linux-amd64.tar.gz && \
+    tar -C /usr/local -xzf go1.16.4.linux-amd64.tar.gz && \
+    export PATH=$PATH:/usr/local/go/bin && \
+    rm go1.16.4.linux-amd64.tar.gz
+
+RUN git clone https://github.com/LionSec/katoolin.git && \
+    cd katoolin && \
+    chmod +x katoolin.py
+# Install Go
+RUN wget https://golang.org/dl/go1.17.linux-amd64.tar.gz
+RUN tar -C /usr/local -xzf go1.17.linux-amd64.tar.gz
+RUN rm go1.17.linux-amd64.tar.gz
+ENV PATH=$PATH:/usr/local/go/bin
+
+
+# Install golang
+RUN apt-get install -y golang
+
+# Set up Go environment variables
+ENV GOPATH /go
+ENV PATH $GOPATH/bin:/usr/local/go/bin:$PATH
+
+
+
+RUN apt-get install -y gcc
+
+# Download and install Sublime Text
+RUN wget -qO /tmp/sublime.tar.bz2 https://download.sublimetext.com/sublime_text_3_build_3211_x64.tar.bz2 && \
+    tar -xvf /tmp/sublime.tar.bz2 -C /opt/ && \
+    ln -s /opt/sublime_text_3/sublime_text /usr/local/bin/subl && \
+    rm -f /tmp/sublime.tar.bz2
+
+# Set the entrypoint to Sublime Text (this will not work as expected without a GUI)
+
+ENTRYPOINT ["/usr/local/bin/subl"]
+
+# Set the default command to run when the container starts
+CMD ["/bin/bash"]
 
 
 
