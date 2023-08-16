@@ -344,6 +344,10 @@ RUN cd ${HOME}/toolkit && \
     cd katoolin && \
     chmod +x katoolin.py
 
+# Install Sn1per Framework
+RUN git clone https://github.com/1N3/Sn1per.git ${HOME}/toolkit/Sn1per && \
+    cd ${HOME}/toolkit/Sn1per && \
+    bash install.sh
 
 # Clean Go Cache
 RUN go clean -cache && \
